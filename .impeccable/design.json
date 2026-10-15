@@ -341,11 +341,6 @@
         "name": "call-pressed",
         "value": "0 8px 18px -10px rgba(11,51,40,.6)",
         "purpose": "Call button :active."
-      },
-      {
-        "name": "pebble",
-        "value": "drop-shadow(0 10px 12px rgba(19,70,54,.2))",
-        "purpose": "Sea-glass pebbles (filter, not box-shadow)."
       }
     ],
     "glass": [
@@ -368,11 +363,6 @@
         "name": "scene",
         "value": "linear-gradient(180deg, #d9e6ea 0%, #e5eeeb 22%, #eef0e5 52%, #f4e9d8 82%, #f5dcc4 100%)",
         "purpose": "The still sky-to-sand page ground."
-      },
-      {
-        "name": "blooms",
-        "value": "radial-gradient(closest-side, rgba(126,196,198,.5) | rgba(110,178,148,.45) | rgba(240,180,136,.48), transparent)",
-        "purpose": "Aqua, green and peach still blooms behind panes."
       }
     ],
     "motion": [
@@ -426,8 +416,8 @@
       "name": "Glass Pane",
       "kind": "card",
       "refersTo": "pane-glass",
-      "description": "Frosted tinted pane over the still scene, with a bloom and pebble beneath.",
-      "html": "<div class=\"ds-scene\"><i class=\"ds-bloom\"></i><div class=\"ds-pane\"><h2>How it works</h2><p>Tell me where the car is, where it's going, and when.</p></div></div>",
+      "description": "Frosted tinted pane over the still scene.",
+      "html": "<div class=\"ds-scene\"><div class=\"ds-pane\"><h2>How it works</h2><p>Tell me where the car is, where it's going, and when.</p></div></div>",
       "css": ":host{--ink:#13342a;--ink-soft:#35554a;--numeral:#7a5c2e;--deep:#0f4434;--ivory:#f6f1e6;--focus:#9a7440;--serif:'Gilda Display','Didot','Bodoni 72',Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-scene{position:relative;padding:32px;isolation:isolate;background:linear-gradient(180deg,#d9e6ea 0%,#e5eeeb 22%,#eef0e5 52%,#f4e9d8 82%,#f5dcc4 100%);} .ds-bloom{position:absolute;z-index:-1;width:320px;aspect-ratio:1;left:-60px;top:-40px;border-radius:50%;background:radial-gradient(closest-side,rgba(126,196,198,.5),rgba(126,196,198,0))} .ds-pane{--tint:230,246,246;border-radius:28px;padding:36px 24px 40px;color:var(--ink);background:linear-gradient(150deg,rgba(var(--tint),.62),rgba(255,255,255,.30) 60%,rgba(var(--tint),.42));-webkit-backdrop-filter:blur(22px) saturate(150%);backdrop-filter:blur(22px) saturate(150%);box-shadow:inset 0 24px 40px -28px rgba(255,255,255,.9),inset 0 -26px 40px -30px rgba(19,70,54,.16),0 28px 60px -28px rgba(19,70,54,.38),0 4px 14px -6px rgba(19,70,54,.12);} .ds-pane h2{margin:0 0 22px;font:400 2.25rem/1.12 var(--serif);color:var(--deep)} .ds-pane p{margin:0;font:400 1.25rem/1.6 var(--sans);color:var(--ink-soft)}"
     },
     {
@@ -463,7 +453,7 @@
   ],
   "narrative": {
     "northStar": "Sea Glass on the Drive South",
-    "overview": "Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky. The page ground is one long vertical gradient that starts as a cool New Jersey morning at the top and ends as a warm Florida afternoon at the bottom, so scrolling is the drive south. Content sits on frosted panes that blur the scene behind them; soft aqua, green and peach blooms and a few sea-glass pebbles lie half under those panes so the frosting has something to frost. Nothing moves. The glass is felt through translucency, inner shading and green-tinted shadow, never through animation or light effects.\n\nThe audience is 40 to 70 and reading on a phone, often inside the Facebook browser. Every rule bends to that: large serif headings, 20px body, 80px call buttons, contrast measured against the actual glass rather than the flat tint, nothing hidden behind a tap or hover. Elegance comes from restraint and material, not from small type or faint text. Density is low: one idea per pane, generous pane padding, a single column on phones.\n\nConfirmed rejections: the dark-hero-plus-white-bands default, every moving glass effect (shimmer, parallax, tilt, animated refraction), glints, specular highlight streaks and rim lines on the glass (removed at Ellie's direction), and eyebrow labels over headings.",
+    "overview": "Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky. The page ground is one long vertical gradient that starts as a cool New Jersey morning at the top and ends as a warm Florida afternoon at the bottom, so scrolling is the drive south. Content sits on frosted panes that blur the scene behind them and nothing else sits on the ground: no scattered blobs or pebbles of color, so the page stays quiet and expensive. Nothing moves. The glass is felt through translucency, inner shading and green-tinted shadow, never through animation or light effects.\n\nThe audience is 40 to 70 and reading on a phone, often inside the Facebook browser. Every rule bends to that: large serif headings, 20px body, 80px call buttons, contrast measured against the actual glass rather than the flat tint, nothing hidden behind a tap or hover. Elegance comes from restraint and material, not from small type or faint text. Density is low: one idea per pane, generous pane padding, a single column on phones.\n\nConfirmed rejections: the dark-hero-plus-white-bands default, every moving glass effect (shimmer, parallax, tilt, animated refraction), glints, specular highlight streaks and rim lines on the glass (removed at Ellie's direction), and eyebrow labels over headings.",
     "keyCharacteristics": [
       "Still sky-to-sand ground (sky → mist → shore → sand → sun) behind everything.",
       "Frosted panes: backdrop blur 22px with saturate 150%, tinted aqua → green → peach down the page.",
@@ -481,7 +471,7 @@
       },
       {
         "name": "The Measured on Glass Rule",
-        "body": "Every text color is checked at 4.5:1 or better against the real rendered glass over its bloom, not the flat tint. If a pane drifts over a darker bloom, the pane or bloom moves; the text never gets lighter.",
+        "body": "Every text color is checked at 4.5:1 or better against the real rendered glass, not the flat tint. If a pane's tint gets darker, the tint changes; the text never gets lighter.",
         "section": "colors"
       },
       {
@@ -522,7 +512,7 @@
     ],
     "dos": [
       "**Do** keep the ground as the single sky → mist → shore → sand → sun gradient; the scroll is the drive south.",
-      "**Do** place a bloom and, where room allows, a pebble partly under each new pane so the frosting has something to blur.",
+      "**Do** keep the ground clear: no color blooms, blobs or pebbles behind the panes (Ellie cut them as less elegant).",
       "**Do** tint panes in page order aqua → green → peach and end on the deep sea-glass pane.",
       "**Do** make every call button at least 80px tall (56px absolute minimum) with the full number on it.",
       "**Do** keep body text at 20px and nothing below 18px.",
@@ -532,7 +522,7 @@
     "donts": [
       "**Don't** add motion of any kind: no transitions, animated glass, parallax, reveal-on-scroll or hover lifts.",
       "**Don't** hide content behind accordions, tabs, menus, popups or sticky widgets.",
-      "**Don't** add glints, specular highlight streaks, highlight strokes or rim lines to panes, pebbles or the shamrock.",
+      "**Don't** add glints, specular highlight streaks, highlight strokes or rim lines to panes or the shamrock.",
       "**Don't** put an eyebrow, kicker or tag label above any heading.",
       "**Don't** use brass for text other than numerals, or the lighter outline brass for any text at all.",
       "**Don't** add a second contact action (form, email, text, social); call is the only action.",

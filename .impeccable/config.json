@@ -35,18 +35,6 @@
       },
       {
         "rule": "design-system-color",
-        "value": "rgba(126,196,198,.5)",
-        "createdAt": "2026-10-15T15:57:43.364Z",
-        "reason": "builder: aqua bloom behind panes (DESIGN.md Sea-Glass Pebbles and Blooms, 45-50% alpha)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgba(110,178,148,.45)",
-        "createdAt": "2026-10-15T15:57:43.431Z",
-        "reason": "builder: green bloom behind panes (DESIGN.md Sea-Glass Pebbles and Blooms)"
-      },
-      {
-        "rule": "design-system-color",
         "value": "rgba(255,255,255,.66)",
         "createdAt": "2026-10-15T15:57:43.497Z",
         "reason": "builder: glass pane fallback gradient end when backdrop-filter is unsupported (DESIGN.md Elevation: 86% -> 66%)"

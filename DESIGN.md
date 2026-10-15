@@ -135,7 +135,7 @@ components:
 
 **Creative North Star: "Sea Glass on the Drive South"**
 
-Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky. The page ground is one long vertical gradient that starts as a cool New Jersey morning at the top and ends as a warm Florida afternoon at the bottom, so scrolling is the drive south. Content sits on frosted panes that blur the scene behind them; soft aqua, green and peach blooms and a few sea-glass pebbles lie half under those panes so the frosting has something to frost. Nothing moves. The glass is felt through translucency, inner shading and green-tinted shadow, never through animation or light effects.
+Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky. The page ground is one long vertical gradient that starts as a cool New Jersey morning at the top and ends as a warm Florida afternoon at the bottom, so scrolling is the drive south. Content sits on frosted panes that blur the scene behind them and nothing else sits on the ground: no scattered blobs or pebbles of color, so the page stays quiet and expensive. Nothing moves. The glass is felt through translucency, inner shading and green-tinted shadow, never through animation or light effects.
 
 The audience is 40 to 70 and reading on a phone, often inside the Facebook browser. Every rule bends to that: large serif headings, 20px body, 80px call buttons, contrast measured against the actual glass rather than the flat tint, nothing hidden behind a tap or hover. Elegance comes from restraint and material, not from small type or faint text. Density is low: one idea per pane, generous pane padding, a single column on phones.
 
@@ -176,7 +176,7 @@ A cool-to-warm pastel scene carrying deep bottle-green ink and glass, with brass
 ### Named Rules
 **The Brass Is Rare Rule.** Brass appears on numerals and on hover/focus outlines, nowhere else. No brass fills, borders, icons or headings.
 
-**The Measured on Glass Rule.** Every text color is checked at 4.5:1 or better against the real rendered glass over its bloom, not the flat tint. If a pane drifts over a darker bloom, the pane or bloom moves; the text never gets lighter.
+**The Measured on Glass Rule.** Every text color is checked at 4.5:1 or better against the real rendered glass, not the flat tint. If a pane's tint gets darker, the tint changes; the text never gets lighter.
 
 **The Green Ink Rule.** Text is bottle green or ivory. No gray text, no pure black.
 
@@ -219,13 +219,12 @@ The header is a glass bar in normal flow, not sticky. On narrow phones it gives 
 
 ## Elevation & Depth
 
-Depth is material: frosted translucency plus soft, green-tinted ambient shadow. Panes blur and saturate whatever lies under them (blur 22px, saturate 150%), so the blooms and pebbles beneath are what make them read as glass. Each light pane carries a diffuse inner shade (a soft white wash fading in from the top, a faint green dusk at the bottom) to suggest thickness, and a long, soft green shadow below. Where backdrop-filter is unsupported the pane falls back to a more opaque tinted gradient (86% → 66%) so text contrast holds.
+Depth is material: frosted translucency plus soft, green-tinted ambient shadow. Panes blur and saturate whatever lies under them (blur 22px, saturate 150%), over the graded ground; the tint, inner shade and shadow are what make them read as glass. Each light pane carries a diffuse inner shade (a soft white wash fading in from the top, a faint green dusk at the bottom) to suggest thickness, and a long, soft green shadow below. Where backdrop-filter is unsupported the pane falls back to a more opaque tinted gradient (86% → 66%) so text contrast holds.
 
 ### Shadow Vocabulary
 - **Pane** (`box-shadow: inset 0 24px 40px -28px rgba(255,255,255,.9), inset 0 -26px 40px -30px rgba(19,70,54,.16), 0 28px 60px -28px rgba(19,70,54,.38), 0 4px 14px -6px rgba(19,70,54,.12)`): every light glass surface, including the header bar.
 - **Deep pane** (`box-shadow: 0 30px 60px -26px rgba(11,51,40,.55), 0 4px 14px -6px rgba(11,51,40,.25)`): the closing deep-green pane. No inner light.
 - **Call button** (`box-shadow: 0 18px 36px -16px rgba(11,51,40,.6), 0 3px 8px -3px rgba(11,51,40,.3)`): pressed state tightens to `0 8px 18px -10px rgba(11,51,40,.6)`.
-- **Pebble** (`filter: drop-shadow(0 10px 12px rgba(19,70,54,.2))`): sea-glass pebbles on the scene.
 
 ### Named Rules
 **The Green Shadow Rule.** Shadows are tinted bottle green (rgba 19,70,54 or 11,51,40), soft and long. No black shadows on light glass, no hard offsets.
@@ -236,7 +235,7 @@ Depth is material: frosted translucency plus soft, green-tinted ambient shadow. 
 
 ## Shapes
 
-Soft, generous corners throughout: panes 28px (36px from 1024px), the header bar 22px, call buttons 20px. Panes have no border; their edge is the change in blur and the shadow. The only line is the 1px translucent divider in One driver. Organic forms come from the SVG world: two irregular pebble silhouettes and the shamrock (three heart leaves, a curved stem and a center disc merged into one silhouette, clipped by a mask so it reads as one piece of glass). List markers are small irregular sea-glass blobs (border-radius 40% 55% 45% 60%), not circles or glyphs.
+Soft, generous corners throughout: panes 28px (36px from 1024px), the header bar 22px, call buttons 20px. Panes have no border; their edge is the change in blur and the shadow. The only line is the 1px translucent divider in One driver. The one organic form is the shamrock (three heart leaves, a curved stem and a center disc merged into one silhouette, clipped by a mask so it reads as one piece of glass). List markers are small irregular sea-glass blobs (border-radius 40% 55% 45% 60%), not circles or glyphs.
 
 ## Components
 
@@ -264,14 +263,11 @@ Roman numerals in brass numeral (Gilda, 28px) in a 3rem column spanning a serif 
 ### Sea-Glass Shamrock (signature)
 The one emblem: a single SVG silhouette filled with a radial sea-glass gradient (pale center to sea-glass edge), a soft diffuse light on each leaf, a blurred inner darkening toward the edge, fine noise grain for frosting and a soft green drop shadow. Used large in the hero (up to 200px phone, 360px desktop) and small (22–32px) in the header and favicon.
 
-### Sea-Glass Pebbles and Blooms
-Still set dressing behind panes, aria-hidden and pointer-events none. Each section gets one bloom (aqua, green or peach radial at 45–50% alpha) and one pebble (96–128px) placed to lie half under the pane edge, crisp outside the pane and softened by the blur under it.
-
 ## Do's and Don'ts
 
 ### Do:
 - **Do** keep the ground as the single sky → mist → shore → sand → sun gradient; the scroll is the drive south.
-- **Do** place a bloom and, where room allows, a pebble partly under each new pane so the frosting has something to blur.
+- **Do** keep the ground clear: no color blooms, blobs or pebbles behind the panes (Ellie cut them as less elegant).
 - **Do** tint panes in page order aqua → green → peach and end on the deep sea-glass pane.
 - **Do** make every call button at least 80px tall (56px absolute minimum) with the full number on it.
 - **Do** keep body text at 20px and nothing below 18px.
@@ -281,7 +277,7 @@ Still set dressing behind panes, aria-hidden and pointer-events none. Each secti
 ### Don't:
 - **Don't** add motion of any kind: no transitions, animated glass, parallax, reveal-on-scroll or hover lifts.
 - **Don't** hide content behind accordions, tabs, menus, popups or sticky widgets.
-- **Don't** add glints, specular highlight streaks, highlight strokes or rim lines to panes, pebbles or the shamrock.
+- **Don't** add glints, specular highlight streaks, highlight strokes or rim lines to panes or the shamrock.
 - **Don't** put an eyebrow, kicker or tag label above any heading.
 - **Don't** use brass for text other than numerals, or the lighter outline brass for any text at all.
 - **Don't** add a second contact action (form, email, text, social); call is the only action.

@@ -5,7 +5,7 @@
 ## What's built
 - **The world: sea glass.** Ellie asked for "very elegant and high-class, glassy, liquid glass, light soft gradients". Impeccable's roll picked sea glass from my list of seven glass renditions: frosted, soft-edged green glass from the Jersey and Florida shores.
   - **The ground:** a still sky that warms down the page, from a cool New Jersey morning (#d9e6ea) at the top to a Florida afternoon (#f5dcc4) at the bottom, so scrolling is the drive south. Nothing moves.
-- **Glass that does something.** Frosted panes (`backdrop-filter: blur(22px) saturate(150%)`) sit over soft light and over crisp sea-glass pebbles that lie half under each pane. The part outside is sharp and the part underneath is frosted, so you can see the glass. The panes tint aqua, then green, then peach down the page, with soft inner shading for thickness. There are no glint or highlight lines, since you cut those before. Browsers without backdrop-filter get a more opaque pane that still reads.
+- **Glass that does something.** Frosted panes (`backdrop-filter: blur(22px) saturate(150%)`) sit straight on the graded sky with nothing else behind them (the color blooms and pebbles were cut as less elegant). The panes tint aqua, then green, then peach down the page, with soft inner shading for thickness. There are no glint or highlight lines, since you cut those before. Browsers without backdrop-filter get a more opaque pane that still reads.
 - **The shamrock** is drawn as one piece of frosted sea glass: three heart leaves and a stem in a single silhouette, translucent in the middle and deeper at the edges, with faint frost grain. It appears large in the hero, small in the header (from 390px wide), and on the favicon, home-screen icon and share image. Redrawn after you said the first one looked like four pieces with the stem behind.
 - **Sections:**
   - glass header with the name and full number
@@ -33,7 +33,6 @@
   - the card tagline is left off
 - **The shamrock is a drawing**, not the card's emblem (the brief says ask before using a card scan). Its greens are sea-glass greens, not sampled from the card.
 - **Gilda Display** is my pick: elegant, high-contrast, and sturdy enough at heading sizes. It's one `@font-face` and `--serif` to swap.
-- **The pebbles** are there so the glass has something to frost. If they read as blobs to you, delete the `<svg class="pebble">` lines and the panes become calm frosted panels over soft light.
 
 ## Placeholders and gaps
 - No photo of Ed (`<!-- PHOTO -->` comments mark the hero emblem spot and the One driver pane).
