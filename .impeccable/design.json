@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T15:56:10+00:00",
+  "title": "Design System: Shamrock Transportation",
+  "extensions": {
+    "colorMeta": {
+      "bottle-ink": {
+        "role": "neutral",
+        "displayName": "Bottle Ink",
+        "canonical": "#13342a",
+        "tonalRamp": [
+          "#14382d",
+          "#23614e",
+          "#328a70",
+          "#42b391",
+          "#6ac8ac",
+          "#96d9c5",
+          "#c3e9de",
+          "#ecf8f5"
+        ]
+      },
+      "bottle-ink-soft": {
+        "role": "neutral",
+        "displayName": "Bottle Ink Soft",
+        "canonical": "#35554a",
+        "tonalRamp": [
+          "#1d2f29",
+          "#335247",
+          "#487465",
+          "#5e9783",
+          "#81b1a0",
+          "#a7c8bd",
+          "#cde0d9",
+          "#eff5f3"
+        ]
+      },
+      "deep-sea-glass": {
+        "role": "primary",
+        "displayName": "Deep Sea-Glass Green",
+        "canonical": "#0f4434",
+        "tonalRamp": [
+          "#0e3f30",
+          "#186d53",
+          "#229b76",
+          "#2cc999",
+          "#58dab3",
+          "#8ae5ca",
+          "#bcf0e1",
+          "#eafaf5"
+        ]
+      },
+      "call-green-light": {
+        "role": "primary",
+        "displayName": "Call Green (light stop)",
+        "canonical": "#1b664d",
+        "tonalRamp": [
+          "#103c2e",
+          "#1c694f",
+          "#279571",
+          "#33c292",
+          "#5ed4ad",
+          "#8ee1c5",
+          "#beeede",
+          "#ebfaf5"
+        ]
+      },
+      "call-green-dark": {
+        "role": "primary",
+        "displayName": "Call Green (dark stop)",
+        "canonical": "#0d3e30",
+        "tonalRamp": [
+          "#0d3f31",
+          "#176e55",
+          "#219c79",
+          "#2aca9d",
+          "#56dcb6",
+          "#89e6cc",
+          "#bcf1e2",
+          "#eafbf6"
+        ]
+      },
+      "shore-ivory": {
+        "role": "neutral",
+        "displayName": "Shore Ivory",
+        "canonical": "#f6f1e6",
+        "tonalRamp": [
+          "#382d14",
+          "#624e23",
+          "#8b6f32",
+          "#b49041",
+          "#c9ab69",
+          "#d9c496",
+          "#e9ddc3",
+          "#f8f4ec"
+        ]
+      },
+      "brass-numeral": {
+        "role": "secondary",
+        "displayName": "Brass Numeral",
+        "canonical": "#7a5c2e",
+        "tonalRamp": [
+          "#382a15",
+          "#604924",
+          "#896734",
+          "#b28643",
+          "#c7a36b",
+          "#d8be97",
+          "#e9dac4",
+          "#f8f3ec"
+        ]
+      },
+      "brass-outline": {
+        "role": "secondary",
+        "displayName": "Brass Outline (non-text only)",
+        "canonical": "#9a7440",
+        "tonalRamp": [
+          "#362916",
+          "#5e4727",
+          "#856437",
+          "#ad8248",
+          "#c3a06f",
+          "#d5bc9a",
+          "#e7d9c5",
+          "#f8f3ed"
+        ]
+      },
+      "sky": {
+        "role": "neutral",
+        "displayName": "Scene: New Jersey Morning Sky",
+        "canonical": "#d9e6ea",
+        "tonalRamp": [
+          "#1b2c31",
+          "#2f4c55",
+          "#436d7a",
+          "#578d9e",
+          "#7ca9b6",
+          "#a3c2cc",
+          "#cadce2",
+          "#eff4f6"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Scene: Mist",
+        "canonical": "#e5eeeb",
+        "tonalRamp": [
+          "#1e2e29",
+          "#345047",
+          "#4b7265",
+          "#619483",
+          "#84aea0",
+          "#a9c7bd",
+          "#cedfd9",
+          "#f0f5f3"
+        ]
+      },
+      "shore": {
+        "role": "neutral",
+        "displayName": "Scene: Shore",
+        "canonical": "#eef0e5",
+        "tonalRamp": [
+          "#2d311c",
+          "#4e5431",
+          "#6e7845",
+          "#8f9b5a",
+          "#aab47e",
+          "#c4cba4",
+          "#dde1cb",
+          "#f4f6ef"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Scene: Sand",
+        "canonical": "#f4e9d8",
+        "tonalRamp": [
+          "#3c2b11",
+          "#674a1d",
+          "#936a2a",
+          "#bf8936",
+          "#d2a560",
+          "#e0c090",
+          "#eddbbf",
+          "#f9f4eb"
+        ]
+      },
+      "sun": {
+        "role": "neutral",
+        "displayName": "Scene: Florida Afternoon Sun",
+        "canonical": "#f5dcc4",
+        "tonalRamp": [
+          "#41260b",
+          "#714113",
+          "#a15d1b",
+          "#d17923",
+          "#e19851",
+          "#eab785",
+          "#f3d6b9",
+          "#fbf2e9"
+        ]
+      },
+      "pane-aqua": {
+        "role": "neutral",
+        "displayName": "Pane Tint Aqua",
+        "canonical": "#e6f6f6",
+        "tonalRamp": [
+          "#143838",
+          "#236262",
+          "#328b8b",
+          "#41b4b4",
+          "#69c9c9",
+          "#96d9d9",
+          "#c3e9e9",
+          "#ecf8f8"
+        ]
+      },
+      "pane-green": {
+        "role": "neutral",
+        "displayName": "Pane Tint Green",
+        "canonical": "#e8f6ee",
+        "tonalRamp": [
+          "#163724",
+          "#255f3e",
+          "#358858",
+          "#45b073",
+          "#6cc693",
+          "#98d7b3",
+          "#c4e8d4",
+          "#edf8f1"
+        ]
+      },
+      "pane-peach": {
+        "role": "neutral",
+        "displayName": "Pane Tint Peach",
+        "canonical": "#fff3e8",
+        "tonalRamp": [
+          "#4c2500",
+          "#853f00",
+          "#bd5a00",
+          "#f57500",
+          "#ff9533",
+          "#ffb470",
+          "#ffd4ad",
+          "#fff2e5"
+        ]
+      },
+      "sea-glass-mid": {
+        "role": "tertiary",
+        "displayName": "Sea-Glass Mid",
+        "canonical": "#9fd0ba",
+        "tonalRamp": [
+          "#193328",
+          "#2c5945",
+          "#3e7f62",
+          "#50a47f",
+          "#76bc9d",
+          "#9fd0ba",
+          "#c8e4d8",
+          "#eef7f3"
+        ]
+      },
+      "sea-glass-edge": {
+        "role": "tertiary",
+        "displayName": "Sea-Glass Edge",
+        "canonical": "#3f8a6c",
+        "tonalRamp": [
+          "#183529",
+          "#2a5b47",
+          "#3b8265",
+          "#4da884",
+          "#73bfa1",
+          "#9dd2bd",
+          "#c7e5d9",
+          "#edf7f3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "The rate figure."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Pane headings (h2)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step titles and the truck aside heading."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Roman step numerals in brass numeral."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Uppercase serif name in header and footer only."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero line under the headline."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running copy, max 34em."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Notes and footer; the 18px floor."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Action word inside call buttons only."
+      },
+      "phone": {
+        "displayName": "Phone",
+        "purpose": "The number inside call buttons, tabular."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pane",
+        "value": "inset 0 24px 40px -28px rgba(255,255,255,.9), inset 0 -26px 40px -30px rgba(19,70,54,.16), 0 28px 60px -28px rgba(19,70,54,.38), 0 4px 14px -6px rgba(19,70,54,.12)",
+        "purpose": "Every light glass surface, including the header bar: diffuse inner thickness shading plus a long green ambient shadow."
+      },
+      {
+        "name": "pane-deep",
+        "value": "0 30px 60px -26px rgba(11,51,40,.55), 0 4px 14px -6px rgba(11,51,40,.25)",
+        "purpose": "The deep sea-glass closing pane."
+      },
+      {
+        "name": "call",
+        "value": "0 18px 36px -16px rgba(11,51,40,.6), 0 3px 8px -3px rgba(11,51,40,.3)",
+        "purpose": "Call buttons at rest."
+      },
+      {
+        "name": "call-pressed",
+        "value": "0 8px 18px -10px rgba(11,51,40,.6)",
+        "purpose": "Call button :active."
+      },
+      {
+        "name": "pebble",
+        "value": "drop-shadow(0 10px 12px rgba(19,70,54,.2))",
+        "purpose": "Sea-glass pebbles (filter, not box-shadow)."
+      }
+    ],
+    "glass": [
+      {
+        "name": "backdrop",
+        "value": "blur(22px) saturate(150%)",
+        "purpose": "backdrop-filter on every light pane and the header bar."
+      },
+      {
+        "name": "fill",
+        "value": "linear-gradient(150deg, rgba(var(--tint),.62), rgba(255,255,255,.30) 60%, rgba(var(--tint),.42))",
+        "purpose": "Pane fill when backdrop-filter is supported."
+      },
+      {
+        "name": "fill-fallback",
+        "value": "linear-gradient(150deg, rgba(var(--tint),.86), rgba(255,255,255,.66))",
+        "purpose": "More opaque fill when backdrop-filter is unsupported, so contrast holds."
+      },
+      {
+        "name": "scene",
+        "value": "linear-gradient(180deg, #d9e6ea 0%, #e5eeeb 22%, #eef0e5 52%, #f4e9d8 82%, #f5dcc4 100%)",
+        "purpose": "The still sky-to-sand page ground."
+      },
+      {
+        "name": "blooms",
+        "value": "radial-gradient(closest-side, rgba(126,196,198,.5) | rgba(110,178,148,.45) | rgba(240,180,136,.48), transparent)",
+        "purpose": "Aqua, green and peach still blooms behind panes."
+      }
+    ],
+    "motion": [
+      {
+        "name": "none",
+        "value": "none",
+        "purpose": "No transitions or animations anywhere. State changes are instant (older audience, Still Glass Rule)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow-phone",
+        "value": "max-width: 389px"
+      },
+      {
+        "name": "phone",
+        "value": "max-width: 639px"
+      },
+      {
+        "name": "tablet",
+        "value": "640px"
+      },
+      {
+        "name": "desktop",
+        "value": "1024px"
+      },
+      {
+        "name": "landscape-phone",
+        "value": "orientation: landscape and max-height: 500px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Call Button",
+      "kind": "button",
+      "refersTo": "button-call",
+      "description": "The only action: deep sea-glass green, 80px tall, action word over the full number.",
+      "html": "<a class=\"ds-call\" href=\"tel:+17323003835\"><b>Call Ed</b><span>732-300-3835</span></a>",
+      "css": ":host{--ink:#13342a;--ink-soft:#35554a;--numeral:#7a5c2e;--deep:#0f4434;--ivory:#f6f1e6;--focus:#9a7440;--serif:'Gilda Display','Didot','Bodoni 72',Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-call{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;max-width:24rem;min-height:80px;padding:14px 18px;border-radius:20px;text-decoration:none;text-align:center;color:var(--ivory);background:linear-gradient(155deg,#1b664d,#0d3e30);box-shadow:0 18px 36px -16px rgba(11,51,40,.6),0 3px 8px -3px rgba(11,51,40,.3)} .ds-call b{font:600 1.0625rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase} .ds-call span{font:400 1.375rem/1.25 var(--sans);letter-spacing:.03em;font-variant-numeric:tabular-nums} .ds-call:hover{background:linear-gradient(155deg,#155741,#0a3327);outline:2px solid var(--focus);outline-offset:4px} .ds-call:focus-visible{outline:2px solid var(--focus);outline-offset:4px} .ds-call:active{box-shadow:0 8px 18px -10px rgba(11,51,40,.6)}"
+    },
+    {
+      "name": "Call Button, Light",
+      "kind": "button",
+      "refersTo": "button-call-light",
+      "description": "Ivory call button used only on the deep closing pane; outline sits inset.",
+      "html": "<div class=\"ds-deep\"><a class=\"ds-call ds-light\" href=\"tel:+17323003835\"><b>Call Ed</b><span>732-300-3835</span></a></div>",
+      "css": ":host{--ink:#13342a;--ink-soft:#35554a;--numeral:#7a5c2e;--deep:#0f4434;--ivory:#f6f1e6;--focus:#9a7440;--serif:'Gilda Display','Didot','Bodoni 72',Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-call{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;max-width:24rem;min-height:80px;padding:14px 18px;border-radius:20px;text-decoration:none;text-align:center;color:var(--ivory);background:linear-gradient(155deg,#1b664d,#0d3e30);box-shadow:0 18px 36px -16px rgba(11,51,40,.6),0 3px 8px -3px rgba(11,51,40,.3)} .ds-call b{font:600 1.0625rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase} .ds-call span{font:400 1.375rem/1.25 var(--sans);letter-spacing:.03em;font-variant-numeric:tabular-nums} .ds-call:hover{background:linear-gradient(155deg,#155741,#0a3327);outline:2px solid var(--focus);outline-offset:4px} .ds-call:focus-visible{outline:2px solid var(--focus);outline-offset:4px} .ds-call:active{box-shadow:0 8px 18px -10px rgba(11,51,40,.6)} .ds-deep{padding:32px;border-radius:28px;background:linear-gradient(155deg,rgba(24,92,70,.94),rgba(11,51,40,.96))} .ds-light{background:linear-gradient(155deg,#fbf8f1,#e9efe9);color:var(--deep);box-shadow:0 18px 36px -18px rgba(0,0,0,.45)} .ds-light:hover{background:#fff;outline-offset:-7px} .ds-light:focus-visible{outline-offset:-7px}"
+    },
+    {
+      "name": "Glass Pane",
+      "kind": "card",
+      "refersTo": "pane-glass",
+      "description": "Frosted tinted pane over the still scene, with a bloom and pebble beneath.",
+      "html": "<div class=\"ds-scene\"><i class=\"ds-bloom\"></i><div class=\"ds-pane\"><h2>How it works</h2><p>Tell me where the car is, where it's going, and when.</p></div></div>",
+      "css": ":host{--ink:#13342a;--ink-soft:#35554a;--numeral:#7a5c2e;--deep:#0f4434;--ivory:#f6f1e6;--focus:#9a7440;--serif:'Gilda Display','Didot','Bodoni 72',Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-scene{position:relative;padding:32px;isolation:isolate;background:linear-gradient(180deg,#d9e6ea 0%,#e5eeeb 22%,#eef0e5 52%,#f4e9d8 82%,#f5dcc4 100%);} .ds-bloom{position:absolute;z-index:-1;width:320px;aspect-ratio:1;left:-60px;top:-40px;border-radius:50%;background:radial-gradient(closest-side,rgba(126,196,198,.5),rgba(126,196,198,0))} .ds-pane{--tint:230,246,246;border-radius:28px;padding:36px 24px 40px;color:var(--ink);background:linear-gradient(150deg,rgba(var(--tint),.62),rgba(255,255,255,.30) 60%,rgba(var(--tint),.42));-webkit-backdrop-filter:blur(22px) saturate(150%);backdrop-filter:blur(22px) saturate(150%);box-shadow:inset 0 24px 40px -28px rgba(255,255,255,.9),inset 0 -26px 40px -30px rgba(19,70,54,.16),0 28px 60px -28px rgba(19,70,54,.38),0 4px 14px -6px rgba(19,70,54,.12);} .ds-pane h2{margin:0 0 22px;font:400 2.25rem/1.12 var(--serif);color:var(--deep)} .ds-pane p{margin:0;font:400 1.25rem/1.6 var(--sans);color:var(--ink-soft)}"
+    },
+    {
+      "name": "Deep Closing Pane",
+      "kind": "card",
+      "refersTo": "pane-deep",
+      "description": "The deep sea-glass green pane that ends the page: ivory heading, light call button.",
+      "html": "<div class=\"ds-close\"><h2>Heading south this winter?</h2><a class=\"ds-lt\" href=\"tel:+17323003835\"><b>Call Ed</b><span>732-300-3835</span></a></div>",
+      "css": ":host{--ink:#13342a;--ink-soft:#35554a;--numeral:#7a5c2e;--deep:#0f4434;--ivory:#f6f1e6;--focus:#9a7440;--serif:'Gilda Display','Didot','Bodoni 72',Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-close{border-radius:28px;padding:36px 24px 40px;background:linear-gradient(155deg,rgba(24,92,70,.94),rgba(11,51,40,.96));box-shadow:0 30px 60px -26px rgba(11,51,40,.55),0 4px 14px -6px rgba(11,51,40,.25)} .ds-close h2{margin:0 0 32px;font:400 2.25rem/1.12 var(--serif);color:var(--ivory)} .ds-lt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;max-width:24rem;min-height:80px;border-radius:20px;text-decoration:none;color:var(--deep);background:linear-gradient(155deg,#fbf8f1,#e9efe9);box-shadow:0 18px 36px -18px rgba(0,0,0,.45)} .ds-lt b{font:600 1.0625rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase} .ds-lt span{font:400 1.375rem/1.25 var(--sans);font-variant-numeric:tabular-nums} .ds-lt:hover{background:#fff;outline:2px solid var(--focus);outline-offset:-7px} .ds-lt:focus-visible{outline:2px solid var(--focus);outline-offset:-7px}"
+    },
+    {
+      "name": "Header Bar",
+      "kind": "nav",
+      "refersTo": "header-bar",
+      "description": "Glass bar in flow: shamrock and serif wordmark left, full phone number right. No menu.",
+      "html": "<div class=\"ds-scene2\"><div class=\"ds-bar\"><a class=\"ds-brand\" href=\"#top\"><svg viewBox=\"0 0 100 100\" width=\"32\" height=\"32\" aria-hidden=\"true\"><defs><radialGradient id=\"dsg\" gradientUnits=\"userSpaceOnUse\" cx=\"50\" cy=\"46\" r=\"46\"><stop offset=\"0\" stop-color=\"#d7eee3\" stop-opacity=\".78\"/><stop offset=\".5\" stop-color=\"#9fd0ba\" stop-opacity=\".86\"/><stop offset=\"1\" stop-color=\"#3f8a6c\" stop-opacity=\".97\"/></radialGradient><path id=\"dslf\" d=\"M50 51C45 46 32 40 30.5 28 29.5 19 35 13.5 41 13.5 45.5 13.5 49 16.5 50 21 51 16.5 54.5 13.5 59 13.5 65 13.5 70.5 19 69.5 28 68 40 55 46 50 51Z\"/></defs><g fill=\"url(#dsg)\" style=\"filter:drop-shadow(0 3px 3px rgba(19,70,54,.25))\"><use href=\"#dslf\"/><use href=\"#dslf\" transform=\"rotate(120 50 52)\"/><use href=\"#dslf\" transform=\"rotate(-120 50 52)\"/><path d=\"M47.6 54C48.2 67 51.6 80.5 59.6 93.4c1.2 1.9 4.2.9 3.6-1.3C59.5 79.2 55.8 66.6 53.6 53.6Z\"/><circle cx=\"50\" cy=\"52\" r=\"4.6\"/></g></svg><span>Shamrock Transportation</span></a><a class=\"ds-phone\" href=\"tel:+17323003835\">732-300-3835</a></div></div>",
+      "css": ":host{--ink:#13342a;--ink-soft:#35554a;--numeral:#7a5c2e;--deep:#0f4434;--ivory:#f6f1e6;--focus:#9a7440;--serif:'Gilda Display','Didot','Bodoni 72',Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-scene2{padding:16px;background:linear-gradient(180deg,#d9e6ea 0%,#e5eeeb 22%,#eef0e5 52%,#f4e9d8 82%,#f5dcc4 100%);} .ds-bar{--tint:255,255,255;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding:6px 18px;border-radius:22px;color:var(--ink);background:linear-gradient(150deg,rgba(var(--tint),.62),rgba(255,255,255,.30) 60%,rgba(var(--tint),.42));-webkit-backdrop-filter:blur(22px) saturate(150%);backdrop-filter:blur(22px) saturate(150%);box-shadow:inset 0 24px 40px -28px rgba(255,255,255,.9),inset 0 -26px 40px -30px rgba(19,70,54,.16),0 28px 60px -28px rgba(19,70,54,.38),0 4px 14px -6px rgba(19,70,54,.12);} .ds-brand{display:flex;align-items:center;gap:10px;min-height:48px;color:inherit;text-decoration:none;font:400 1.0625rem/1.2 var(--serif);letter-spacing:.12em;text-transform:uppercase} .ds-phone{display:inline-flex;align-items:center;min-height:48px;color:inherit;text-decoration:none;font:600 1.125rem var(--sans);letter-spacing:.03em;font-variant-numeric:tabular-nums} .ds-phone:hover{text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--focus)} .ds-brand:focus-visible,.ds-phone:focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:6px}"
+    },
+    {
+      "name": "Steps List",
+      "kind": "custom",
+      "description": "Brass Roman numerals beside serif titles and sans copy.",
+      "html": "<ol class=\"ds-steps\"><li><span class=\"n\">I</span><h3>A call</h3><p>Tell me where the car is, where it's going, and when.</p></li><li><span class=\"n\">II</span><h3>Your flight</h3><p>Hand me the keys and fly.</p></li></ol>",
+      "css": ":host{--ink:#13342a;--ink-soft:#35554a;--numeral:#7a5c2e;--deep:#0f4434;--ivory:#f6f1e6;--focus:#9a7440;--serif:'Gilda Display','Didot','Bodoni 72',Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-steps{list-style:none;margin:0;padding:24px;display:grid;gap:26px;background:#eef0e5} .ds-steps li{display:grid;grid-template-columns:3rem 1fr;column-gap:10px} .ds-steps .n{grid-row:span 2;font:400 1.75rem/1.25 var(--serif);color:var(--numeral)} .ds-steps h3{margin:0 0 2px;font:400 1.5rem/1.3 var(--serif);color:var(--deep)} .ds-steps p{margin:0;font:400 1.25rem/1.6 var(--sans);color:var(--ink-soft)}"
+    },
+    {
+      "name": "Sea-Glass Shamrock",
+      "kind": "custom",
+      "description": "The one emblem: a single-piece frosted sea-glass shamrock (simplified preview; the build adds edge deepening, leaf light and grain via an SVG filter).",
+      "html": "<div class=\"ds-emb\"><svg viewBox=\"0 0 100 100\" width=\"160\" height=\"160\" aria-hidden=\"true\"><defs><radialGradient id=\"dsg\" gradientUnits=\"userSpaceOnUse\" cx=\"50\" cy=\"46\" r=\"46\"><stop offset=\"0\" stop-color=\"#d7eee3\" stop-opacity=\".78\"/><stop offset=\".5\" stop-color=\"#9fd0ba\" stop-opacity=\".86\"/><stop offset=\"1\" stop-color=\"#3f8a6c\" stop-opacity=\".97\"/></radialGradient><path id=\"dslf\" d=\"M50 51C45 46 32 40 30.5 28 29.5 19 35 13.5 41 13.5 45.5 13.5 49 16.5 50 21 51 16.5 54.5 13.5 59 13.5 65 13.5 70.5 19 69.5 28 68 40 55 46 50 51Z\"/></defs><g fill=\"url(#dsg)\" style=\"filter:drop-shadow(0 3px 3px rgba(19,70,54,.25))\"><use href=\"#dslf\"/><use href=\"#dslf\" transform=\"rotate(120 50 52)\"/><use href=\"#dslf\" transform=\"rotate(-120 50 52)\"/><path d=\"M47.6 54C48.2 67 51.6 80.5 59.6 93.4c1.2 1.9 4.2.9 3.6-1.3C59.5 79.2 55.8 66.6 53.6 53.6Z\"/><circle cx=\"50\" cy=\"52\" r=\"4.6\"/></g></svg></div>",
+      "css": ".ds-emb{padding:24px;display:flex;justify-content:center;background:linear-gradient(180deg,#d9e6ea 0%,#e5eeeb 22%,#eef0e5 52%,#f4e9d8 82%,#f5dcc4 100%);}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Sea Glass on the Drive South",
+    "overview": "Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky. The page ground is one long vertical gradient that starts as a cool New Jersey morning at the top and ends as a warm Florida afternoon at the bottom, so scrolling is the drive south. Content sits on frosted panes that blur the scene behind them; soft aqua, green and peach blooms and a few sea-glass pebbles lie half under those panes so the frosting has something to frost. Nothing moves. The glass is felt through translucency, inner shading and green-tinted shadow, never through animation or light effects.\n\nThe audience is 40 to 70 and reading on a phone, often inside the Facebook browser. Every rule bends to that: large serif headings, 20px body, 80px call buttons, contrast measured against the actual glass rather than the flat tint, nothing hidden behind a tap or hover. Elegance comes from restraint and material, not from small type or faint text. Density is low: one idea per pane, generous pane padding, a single column on phones.\n\nConfirmed rejections: the dark-hero-plus-white-bands default, every moving glass effect (shimmer, parallax, tilt, animated refraction), glints, specular highlight streaks and rim lines on the glass (removed at Ellie's direction), and eyebrow labels over headings.",
+    "keyCharacteristics": [
+      "Still sky-to-sand ground (sky → mist → shore → sand → sun) behind everything.",
+      "Frosted panes: backdrop blur 22px with saturate 150%, tinted aqua → green → peach down the page.",
+      "Deep sea-glass green for every call button and for the closing pane.",
+      "Gilda Display for headings, numerals and the wordmark; the system sans at 20px for reading.",
+      "Brass appears only on numerals and on hover/focus outlines.",
+      "One emblem: a single-piece frosted sea-glass shamrock drawn in SVG.",
+      "Zero motion, zero hidden content."
+    ],
+    "rules": [
+      {
+        "name": "The Brass Is Rare Rule",
+        "body": "Brass appears on numerals and on hover/focus outlines, nowhere else. No brass fills, borders, icons or headings.",
+        "section": "colors"
+      },
+      {
+        "name": "The Measured on Glass Rule",
+        "body": "Every text color is checked at 4.5:1 or better against the real rendered glass over its bloom, not the flat tint. If a pane drifts over a darker bloom, the pane or bloom moves; the text never gets lighter.",
+        "section": "colors"
+      },
+      {
+        "name": "The Green Ink Rule",
+        "body": "Text is bottle green or ivory. No gray text, no pure black.",
+        "section": "colors"
+      },
+      {
+        "name": "The Eighteen Floor Rule",
+        "body": "No reading text below 18px (1.125rem). Body is 20px.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Weight Serif Rule",
+        "body": "Gilda Display is used at 400 only. Hierarchy comes from size and color, never from faux bold.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "Headings stand alone. No small caps kicker, tag or eyebrow label above any heading. Uppercase tracking is reserved for the wordmark and the action word inside a call button.",
+        "section": "typography"
+      },
+      {
+        "name": "The Green Shadow Rule",
+        "body": "Shadows are tinted bottle green (rgba 19,70,54 or 11,51,40), soft and long. No black shadows on light glass, no hard offsets.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Still Glass Rule",
+        "body": "Nothing moves: no transitions, animations, parallax, shimmer or scroll effects. State changes are instant.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No Glint Rule",
+        "body": "Glass has no specular streaks, glints, highlight strokes or rim lines. Light inside the glass is only ever a diffuse wash.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the ground as the single sky → mist → shore → sand → sun gradient; the scroll is the drive south.",
+      "**Do** place a bloom and, where room allows, a pebble partly under each new pane so the frosting has something to blur.",
+      "**Do** tint panes in page order aqua → green → peach and end on the deep sea-glass pane.",
+      "**Do** make every call button at least 80px tall (56px absolute minimum) with the full number on it.",
+      "**Do** keep body text at 20px and nothing below 18px.",
+      "**Do** measure every text color against the rendered glass at 4.5:1 or better; the brass numeral at 4.77:1 is the floor.",
+      "**Do** keep tap targets at least 48px tall, including header and footer links."
+    ],
+    "donts": [
+      "**Don't** add motion of any kind: no transitions, animated glass, parallax, reveal-on-scroll or hover lifts.",
+      "**Don't** hide content behind accordions, tabs, menus, popups or sticky widgets.",
+      "**Don't** add glints, specular highlight streaks, highlight strokes or rim lines to panes, pebbles or the shamrock.",
+      "**Don't** put an eyebrow, kicker or tag label above any heading.",
+      "**Don't** use brass for text other than numerals, or the lighter outline brass for any text at all.",
+      "**Don't** add a second contact action (form, email, text, social); call is the only action.",
+      "**Don't** use gray or black text or black shadows; ink and shadow are bottle green.",
+      "**Don't** bold Gilda Display or set it below 16px (the phone wordmark size)."
+    ]
+  }
+}
