@@ -258,7 +258,7 @@ Heavy, calm and impossible to miss. The call button is the only interactive cont
 Roman numerals in brass numeral (Gilda, 28px) in a 3rem column spanning a serif title and a sans line of body copy; 26px between steps.
 
 ### Engraved Shamrock (signature)
-The one emblem: the three-heart-leaf-and-stem silhouette drawn as a single fine outline (an SVG feMorphology dilate of the silhouette minus the silhouette itself) in currentColor, with one vein per leaf at 75% opacity. No fill, gradient, grain or shadow. Deep sea-glass green in the hero crest (88px phone, 112px desktop, centered above the headline); ivory with a heavier line on the deep-green favicon and home-screen icon. Ellie chose it as option A of four on 2026-10-15 (options page: https://claude.ai/artifact/6R56VxMiaXTtfF81aAc4o1); B solid emerald, C seal and D quiet glass remain candidates.
+The one emblem: the three-heart-leaf-and-stem silhouette drawn as a single fine outline (an SVG feMorphology dilate of the silhouette minus the silhouette itself) in currentColor, with one vein per leaf at 75% opacity. The stem carries its own outline (masked clear of the center hub) so a line divides it from the leaf it crosses, as in the solid version. No fill, gradient, grain or shadow. Deep sea-glass green in the hero crest (88px phone, 112px desktop, centered above the headline); ivory with a heavier line on the deep-green favicon and home-screen icon. Ellie chose it as option A of four on 2026-10-15 (options page: https://claude.ai/artifact/6R56VxMiaXTtfF81aAc4o1); B solid emerald, C seal and D quiet glass remain candidates.
 
 ## Do's and Don'ts
 
