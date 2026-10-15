@@ -249,8 +249,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <filter id="sham-line" x="-10%" y="-10%" width="120%" height="120%"><feMorphology in="SourceGraphic" operator="dilate" radius="1.5" result="d"/><feComposite in="d" in2="SourceAlpha" operator="out"/></filter>
   <g id="shamrock">
     <g filter="url(#sham-line)" fill="currentColor"><use href="#sham-shape"/></g>
-    <mask id="sham-hub" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/><circle cx="50" cy="52" r="5.2" fill="#000"/></mask>
-    <g mask="url(#sham-hub)"><g filter="url(#sham-line)" fill="currentColor"><use href="#sham-stem"/></g></g>
+    <mask id="sham-under" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><use href="#sham-stem" fill="#fff"/><circle cx="50" cy="52" r="5.2" fill="#000"/></mask>
+    <g mask="url(#sham-under)"><g filter="url(#sham-line)" fill="currentColor"><use href="#lf" transform="rotate(120 50 52)"/><use href="#lf" transform="rotate(-120 50 52)"/></g></g>
     <g stroke="currentColor" stroke-width="1.1" stroke-linecap="round" fill="none" opacity=".75"><path id="vein" d="M50 47V25"/><use href="#vein" transform="rotate(120 50 52)"/><use href="#vein" transform="rotate(-120 50 52)"/></g>
   </g>
 </defs>
