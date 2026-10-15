@@ -160,7 +160,7 @@ A cool-to-warm pastel scene carrying deep bottle-green ink and glass, with brass
 
 ### Secondary
 - **Brass Numeral** (brass-numeral): the Roman numerals I–III in How it works. This is the deeper brass and the lowest-contrast text on the page (measured 4.77:1 on the real glass).
-- **Brass Outline** (brass-outline): hover and focus outlines (2px, 4px offset) and the hover underline color on the header phone and footer links. Non-text only; it measures 3.2–4.3:1 and must never carry text.
+- **Brass Outline** (brass-outline): hover and focus outlines (2px, 4px offset) and the hover underline color on footer links. Non-text only; it measures 3.2–4.3:1 and must never carry text.
 
 ### Tertiary
 - **Sea-Glass Mid / Sea-Glass Edge** (sea-glass-mid, sea-glass-edge): the shamrock emblem's radial fill, pale at the center and deepening to the edge. The list markers in One driver use a smaller sea-glass gradient in the same family.
@@ -193,12 +193,12 @@ A cool-to-warm pastel scene carrying deep bottle-green ink and glass, with brass
 - **Headline** (400, clamp 32–46px, 1.12): pane headings (h2), balanced, 22px below.
 - **Title** (400, 24px, 1.3): step titles; the truck aside heading runs 26px on phones and 32px on desktop.
 - **Numeral** (400, 28px, 1.25): Roman step numerals in brass numeral, in a 3rem column.
-- **Wordmark** (400, 17px, 0.12em, uppercase): the name in the header and footer only. Tracking drops to 0.03em on phones.
+- **Wordmark** (400, 17px, 0.12em, uppercase): the name in the header and footer only. Tracking is 0.2em in the header, 0.16em on phones.
 - **Lead** (400, 21px, 1.55, max 28em): the hero line under the headline.
 - **Body** (400, 20px, 1.6, max 34em): all running copy; text-wrap pretty.
 - **Small** (400, 18px): notes and the footer. 18px is the floor for any reading text.
 - **Label** (600, 17px, 0.14em, uppercase): the action word on a call button ("Call Ed"), sitting directly above the number. It exists only inside buttons.
-- **Phone** (400, 22px, 0.03em, tabular numerals): the number inside call buttons; the header number is 600 at 18px, tabular.
+- **Phone** (400, 22px, 0.03em, tabular numerals): the number inside call buttons.
 
 ### Named Rules
 **The Eighteen Floor Rule.** No reading text below 18px (1.125rem). Body is 20px.
@@ -215,7 +215,7 @@ Breakpoints are 640px (gutter and pane padding grow) and 1024px (two-column comp
 
 Pane padding steps 36/24/40px → 52/48/56px → 60/64/64px. A call button sits 32px below the copy it follows. Text measures cap at 28em (lead) and 34em (body).
 
-The header is a glass bar in normal flow, not sticky. On narrow phones it gives up tracking, then the small shamrock (below 390px), keeping the full phone number visible at every width.
+The header is a slim glass bar in normal flow, not sticky, holding only the wordmark, centered. There is no header phone number: the number lives on the Call buttons, so it never shows twice on the first screen.
 
 ## Elevation & Depth
 

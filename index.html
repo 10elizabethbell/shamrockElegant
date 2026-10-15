@@ -61,17 +61,9 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 
 /* ---------- header ---------- */
 .top{padding-top:14px}
-.top .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding:6px 18px;border-radius:22px}
-.brand{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:10px;min-height:48px;text-decoration:none;font:400 1.0625rem/1.2 var(--serif);letter-spacing:.12em;text-transform:uppercase}
-.brand svg{width:32px;height:32px;flex:none;overflow:visible}
-.top-phone{flex:none;display:inline-flex;align-items:center;min-height:48px;padding:0 4px;font:600 1.125rem var(--sans);letter-spacing:.03em;text-decoration:none;font-variant-numeric:tabular-nums}
-@media (max-width:639px){
-  .top .bar{flex-direction:column;justify-content:center;gap:0;padding:6px 16px;border-radius:22px}
-  .brand{flex:none;justify-content:center;min-height:44px;font-size:1rem;letter-spacing:.16em;white-space:nowrap}
-  .brand svg{display:none}
-  .top-phone{justify-content:center;min-height:48px;padding:0 12px;font-size:1.125rem;letter-spacing:.06em;position:relative}
-  .top-phone::before{content:"";position:absolute;top:0;left:50%;width:40px;margin-left:-20px;height:1px;background:rgba(19,70,54,.22)}
-}
+.top .bar{display:flex;align-items:center;justify-content:center;min-height:60px;padding:6px 16px;border-radius:22px}
+.brand{display:flex;align-items:center;justify-content:center;min-height:48px;text-decoration:none;white-space:nowrap;font:400 1.0625rem/1.2 var(--serif);letter-spacing:.2em;text-transform:uppercase}
+@media (max-width:639px){.brand{font-size:1rem;letter-spacing:.16em}}
 @media (max-width:379px){.brand{letter-spacing:.1em}}
 @media (max-width:339px){.brand{letter-spacing:.02em}.top .bar{padding:6px 8px}}
 
@@ -88,7 +80,6 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .close .call:focus-visible{outline-offset:-7px}
 @media (max-width:399px){.call b{letter-spacing:.08em}}
 @media (hover:hover){
-  .top-phone:hover{text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--focus)}
   .call:hover{background:linear-gradient(155deg,#155741,#0a3327);outline:2px solid var(--focus);outline-offset:4px}
   .call.light:hover{background:#fff;outline-offset:-7px}
   footer a:hover{text-decoration-color:var(--focus)}
@@ -174,7 +165,7 @@ DIRECTION CONTRACT (Ellie, 2026-10-15: very elegant, high-class, glassy "liquid 
 THESIS: sea glass. Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky that warms from a New Jersey morning (top) to a Florida afternoon (bottom): the scroll is the drive south. Refuses the dark-hero-plus-white-bands default and every moving glass effect.
 OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons and close pane; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. A frosted sea-glass shamrock is the one emblem. No glints, no motion.
 STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → call.
-FIRST VIEWPORT (phone): glass header bar, centered on phones: name in spaced capitals, a short hairline, the full number below (small shamrock from 640px); then one centered column: a small frosted shamrock crest, the deep-green "You fly. / I'll drive." as the single focal point, Ed's line, CALL ED button carrying the number, "My own cell" note. Desktop keeps the same centered column, larger.
+FIRST VIEWPORT (phone): a slim glass header bar holding only the name in spaced capitals, centered (the number lives on the Call button, at Ellie's request); then one centered column: a small frosted shamrock crest, the deep-green "You fly. / I'll drive." as the single focal point, Ed's line, CALL ED button carrying the number, "My own cell" note. Desktop keeps the same centered column, larger.
 FORM: brief-pinned glass world; rendition = sea glass, candidate 4 of 7 (seed key 755a6284).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 -->
@@ -183,8 +174,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <header class="top">
   <div class="wrap">
     <div class="bar glass">
-      <a class="brand" href="#top" aria-label="Shamrock Transportation, back to top"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#shamrock"/></svg><span>Shamrock Transportation</span></a>
-      <a class="top-phone" href="tel:+17323003835" aria-label="Call Ed at 732-300-3835">732-300-3835</a>
+      <a class="brand" href="#top" aria-label="Shamrock Transportation, back to top"><span>Shamrock Transportation</span></a>
     </div>
   </div>
 </header>
