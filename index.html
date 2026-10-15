@@ -64,12 +64,10 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .glass.t-green{--tint:232,246,238}
 .glass.t-peach{--tint:255,243,232}
 .glass.deep{background:linear-gradient(155deg,rgba(24,92,70,.94),rgba(11,51,40,.96));color:var(--ivory);
-  box-shadow:inset 0 24px 40px -30px rgba(190,230,212,.35),0 30px 60px -26px rgba(11,51,40,.55),0 4px 14px -6px rgba(11,51,40,.25)}
+  box-shadow:0 30px 60px -26px rgba(11,51,40,.55),0 4px 14px -6px rgba(11,51,40,.25)}
 
 /* ---------- header ---------- */
 .top{padding-top:14px}
-.top .wrap{position:relative}
-.top .pebble{width:112px;right:30%;top:34px}
 .top .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding:6px 18px;border-radius:22px}
 .brand{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:10px;min-height:48px;text-decoration:none;font:400 1.0625rem/1.2 var(--serif);letter-spacing:.12em;text-transform:uppercase}
 .brand svg{width:32px;height:32px;flex:none;overflow:visible}
@@ -83,7 +81,7 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .call{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;max-width:24rem;min-height:80px;padding:14px 18px;
   border-radius:20px;text-decoration:none;text-align:center;color:var(--ivory);
   background:linear-gradient(155deg,#1b664d,#0d3e30);
-  box-shadow:inset 0 14px 22px -16px rgba(200,240,220,.45),0 18px 36px -16px rgba(11,51,40,.6),0 3px 8px -3px rgba(11,51,40,.3)}
+  box-shadow:0 18px 36px -16px rgba(11,51,40,.6),0 3px 8px -3px rgba(11,51,40,.3)}
 .call b{font:600 1.0625rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase}
 .call span{font:400 1.375rem/1.25 var(--sans);letter-spacing:.03em;font-variant-numeric:tabular-nums}
 .call:focus-visible{outline:2px solid var(--focus);outline-offset:4px}
@@ -156,7 +154,6 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
   :root{--gutter:48px;--radius:36px}
   .top{padding-top:22px}
   .top .bar{padding:8px 28px}
-  .top .pebble{width:150px;right:26%;top:44px}
   .hero{padding:96px 0 112px}
   .hero > .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
   .emblem{width:100%;max-width:360px;margin:0 auto}
@@ -186,9 +183,9 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
 <!--
 DIRECTION CONTRACT (Ellie, 2026-10-15: very elegant, high-class, glassy "liquid glass", light soft gradients; older-audience rules hold)
 THESIS: sea glass. Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky that warms from a New Jersey morning (top) to a Florida afternoon (bottom): the scroll is the drive south. Refuses the dark-hero-plus-white-bands default and every moving glass effect.
-OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) with still blooms of aqua, sea-glass green and sun-peach plus crisp sea-glass pebbles lying half under the panes (sharp outside, frosted inside); panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons and close pane; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. A frosted sea-glass shamrock is the one emblem. No glints, no motion.
+OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) with still blooms of aqua, sea-glass green and sun-peach plus frosted sea-glass pebbles lying half under the panes (crisp edge outside, softened under the pane); panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons and close pane; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. A frosted sea-glass shamrock is the one emblem. No glints, no motion.
 STORY: You fly. I'll drive your car. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → call.
-FIRST VIEWPORT (phone): glass header bar with shamrock (from 380px), name and full number, a pebble showing through its frost; deep-green headline over the morning sky; Ed's line; CALL ED button carrying the number; "My own cell" note; the frosted sea-glass shamrock ends the screen. Desktop: the shamrock to the right.
+FIRST VIEWPORT (phone): glass header bar with shamrock (from 390px), name and full number; deep-green headline over the morning sky; Ed's line; CALL ED button carrying the number; "My own cell" note; the frosted sea-glass shamrock ends the screen. Desktop: the shamrock to the right.
 FORM: brief-pinned glass world; rendition = sea glass, candidate 4 of 7 (seed key 755a6284).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 -->
@@ -196,7 +193,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <div class="page">
 <header class="top">
   <div class="wrap">
-    <svg class="pebble" viewBox="0 0 100 80" aria-hidden="true"><use href="#peb-a" fill="url(#pg-aqua)"/><use href="#peb-a" fill="url(#pcore)"/></svg>
     <div class="bar glass">
       <a class="brand" href="#top" aria-label="Shamrock Transportation, back to top"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#shamrock"/></svg><span>Shamrock Transportation</span></a>
       <a class="top-phone" href="tel:+17323003835" aria-label="Call Ed at 732-300-3835">732-300-3835</a>
@@ -221,7 +217,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   <div class="pair">
     <section class="spot" id="how">
-      <i class="bloom green" aria-hidden="true"></i><svg class="pebble" viewBox="0 0 100 80" aria-hidden="true"><use href="#peb-b" fill="url(#pg-green)"/><use href="#peb-b" fill="url(#pcore)"/></svg>
+      <i class="bloom green" aria-hidden="true"></i><svg class="pebble" viewBox="-6 -6 112 92" aria-hidden="true"><g filter="url(#peb-glass)"><use href="#peb-b" fill="url(#pg-green)"/><use href="#peb-b" fill="url(#pcore)"/></g></svg>
       <div class="pane glass t-aqua">
         <h2>How it works</h2>
         <ol class="steps" role="list">
@@ -233,7 +229,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </section>
 
     <section class="spot" id="rate">
-      <i class="bloom aqua" aria-hidden="true"></i><svg class="pebble" viewBox="0 0 100 80" aria-hidden="true"><use href="#peb-a" fill="url(#pg-peach)"/><use href="#peb-a" fill="url(#pcore)"/></svg>
+      <i class="bloom aqua" aria-hidden="true"></i><svg class="pebble" viewBox="-6 -6 112 92" aria-hidden="true"><g filter="url(#peb-glass)"><use href="#peb-a" fill="url(#pg-peach)"/><use href="#peb-a" fill="url(#pcore)"/></g></svg>
       <div class="pane glass t-green">
         <h2>The rate</h2>
         <!-- RATE: $1 a mile, from Ed via Ellie 2026-10-15. What it includes is not confirmed. -->
@@ -245,7 +241,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </div>
 
   <section class="spot" id="driver">
-    <i class="bloom peach" aria-hidden="true"></i><svg class="pebble" viewBox="0 0 100 80" aria-hidden="true"><use href="#peb-b" fill="url(#pg-aqua)"/><use href="#peb-b" fill="url(#pcore)"/></svg>
+    <i class="bloom peach" aria-hidden="true"></i><svg class="pebble" viewBox="-6 -6 112 92" aria-hidden="true"><g filter="url(#peb-glass)"><use href="#peb-b" fill="url(#pg-aqua)"/><use href="#peb-b" fill="url(#pcore)"/></g></svg>
     <div class="pane glass t-peach">
       <!-- PHOTO: a portrait of Ed goes here once he sends one. -->
       <h2>One driver</h2>
@@ -262,7 +258,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </section>
 
   <section class="spot close" id="call">
-    <i class="bloom peach" aria-hidden="true"></i><svg class="pebble" viewBox="0 0 100 80" aria-hidden="true"><use href="#peb-a" fill="url(#pg-green)"/><use href="#peb-a" fill="url(#pcore)"/></svg>
+    <i class="bloom peach" aria-hidden="true"></i><svg class="pebble" viewBox="-6 -6 112 92" aria-hidden="true"><g filter="url(#peb-glass)"><use href="#peb-a" fill="url(#pg-green)"/><use href="#peb-a" fill="url(#pcore)"/></g></svg>
     <div class="pane glass deep">
       <h2>Heading south this winter?</h2>
       <a class="call light" href="tel:+17323003835"><b>Call Ed</b><span>732-300-3835</span></a>
@@ -309,7 +305,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </filter>
   <g id="lobe-set">
     <ellipse cx="40" cy="24" rx="8" ry="8" fill="url(#lobe-light)"/><ellipse cx="60" cy="24" rx="8" ry="8" fill="url(#lobe-light)"/>
-    <path d="M50 23.5C50.4 32 50.3 40 50 47" fill="none" stroke="#2a6f55" stroke-opacity=".2" stroke-width="1.3" stroke-linecap="round"/>
   </g>
   <g id="shamrock" filter="url(#sham-glass)">
     <g mask="url(#sham-m)">
@@ -319,12 +314,22 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </g>
 
 
+    <filter id="peb-glass" x="-10%" y="-10%" width="120%" height="125%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3.2" result="b"/>
+      <feComposite in="SourceAlpha" in2="b" operator="arithmetic" k2="1" k3="-1" result="rim"/>
+      <feFlood flood-color="#33604f" flood-opacity=".45"/>
+      <feComposite in2="rim" operator="in" result="rimc"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="11" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .3 -.05" result="speck"/>
+      <feComposite in="speck" in2="SourceAlpha" operator="in" result="grain"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="rimc"/><feMergeNode in="grain"/></feMerge>
+    </filter>
     <path id="peb-a" d="M18 12C34-2 70 2 86 16c14 12 16 38 4 52-12 14-46 16-66 8C4 68-4 48 2 32 5 24 10 18 18 12z"/>
     <path id="peb-b" d="M30 6c20-8 48 0 60 18 10 16 6 40-10 50-18 12-50 10-66-4C2 58 0 36 8 22 12 14 20 10 30 6z"/>
-    <linearGradient id="pg-aqua" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c6e7e5"/><stop offset="1" stop-color="#78bcbb"/></linearGradient>
-    <linearGradient id="pg-green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c3e2d2"/><stop offset="1" stop-color="#68aa8d"/></linearGradient>
-    <linearGradient id="pg-peach" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fae0c9"/><stop offset="1" stop-color="#e6a67c"/></linearGradient>
-    <radialGradient id="pcore" cx=".42" cy=".4" r=".55"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="pg-aqua" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfe6e4" stop-opacity=".9"/><stop offset="1" stop-color="#8cbfbd" stop-opacity=".92"/></linearGradient>
+    <linearGradient id="pg-green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cde4d7" stop-opacity=".9"/><stop offset="1" stop-color="#7fb39b" stop-opacity=".92"/></linearGradient>
+    <linearGradient id="pg-peach" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e2cf" stop-opacity=".9"/><stop offset="1" stop-color="#e2b08c" stop-opacity=".92"/></linearGradient>
+    <radialGradient id="pcore" cx=".42" cy=".4" r=".55"><stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
   </defs>
 </svg>
 <script>
