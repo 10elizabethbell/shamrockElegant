@@ -155,7 +155,7 @@ Confirmed rejections: the dark-hero-plus-white-bands default, every moving glass
 A cool-to-warm pastel scene carrying deep bottle-green ink and glass, with brass held back for a few accents.
 
 ### Primary
-- **Deep Sea-Glass Green** (deep-sea-glass): headline and heading color on light glass, the closing pane's ground (as a 155deg gradient from a lighter sea green to near-black green), and the text color on the light call button.
+- **Deep Sea-Glass Green** (deep-sea-glass): headline and heading color on light glass and the text color on the light call button.
 - **Call Green** (call-green-light → call-green-dark): the 155deg gradient on every call button. Hover deepens both stops slightly.
 
 ### Secondary
@@ -168,7 +168,7 @@ A cool-to-warm pastel scene carrying deep bottle-green ink and glass, with brass
 ### Neutral
 - **Bottle Ink** (bottle-ink): primary text. Ink is deep green, never gray.
 - **Bottle Ink Soft** (bottle-ink-soft): secondary body copy inside panes, notes, footer text (6.2:1 or better on the scene).
-- **Shore Ivory** (shore-ivory): text on deep green (call buttons, closing pane heading), and the base of the light call button gradient.
+- **Shore Ivory** (shore-ivory): text on the deep-green call buttons.
 - **The Scene** (sky, mist, shore, sand, sun): the body gradient at 0 / 22 / 52 / 82 / 100%. The html background is sun so overscroll lands on the Florida end.
 - **Pane Tints** (pane-aqua, pane-green, pane-peach): RGB tints mixed into the glass gradient at 62% → 30% white → 42%, in page order aqua, green, peach.
 - **Divider**: 1px rgba(19,52,42,.14), used only between the One driver body and its truck aside.
@@ -223,7 +223,6 @@ Depth is material: frosted translucency plus soft, green-tinted ambient shadow. 
 
 ### Shadow Vocabulary
 - **Pane** (`box-shadow: inset 0 24px 40px -28px rgba(255,255,255,.9), inset 0 -26px 40px -30px rgba(19,70,54,.16), 0 28px 60px -28px rgba(19,70,54,.38), 0 4px 14px -6px rgba(19,70,54,.12)`): every light glass surface, including the header bar.
-- **Deep pane** (`box-shadow: 0 30px 60px -26px rgba(11,51,40,.55), 0 4px 14px -6px rgba(11,51,40,.25)`): the closing deep-green pane. No inner light.
 - **Call button** (`box-shadow: 0 18px 36px -16px rgba(11,51,40,.6), 0 3px 8px -3px rgba(11,51,40,.3)`): pressed state tightens to `0 8px 18px -10px rgba(11,51,40,.6)`.
 
 ### Named Rules
@@ -243,8 +242,7 @@ Soft, generous corners throughout: panes 28px (36px from 1024px), the header bar
 Heavy, calm and impossible to miss. The call button is the only interactive control besides the phone links.
 - **Shape:** gently rounded (20px), full width up to 24rem, at least 80px tall.
 - **Primary (Call):** a 155deg call-green gradient, ivory text; two lines centered, the uppercase action label (600, 17px, 0.14em) above the number (22px, tabular). Every button dials the same number.
-- **Light (on the deep pane):** an ivory-to-pale-green gradient with deep sea-glass text and a neutral shadow; hover goes to plain white.
-- **Hover / Focus:** hover darkens the gradient and adds the 2px brass outline at 4px offset; focus-visible shows the same outline. On the deep pane the outline sits inset (-7px) so it stays inside the green. Pressed tightens the shadow. No transitions.
+- **Hover / Focus:** hover darkens the gradient and adds the 2px brass outline at 4px offset; focus-visible shows the same outline.
 
 ### Cards / Containers (Glass Pane)
 - **Corner Style:** 28px, 36px at desktop.
@@ -252,7 +250,6 @@ Heavy, calm and impossible to miss. The call button is the only interactive cont
 - **Shadow Strategy:** Pane shadow (see Elevation & Depth).
 - **Border:** none.
 - **Internal Padding:** 36/24/40px, 52/48/56px, 60/64/64px by breakpoint.
-- **Deep variant:** the closing pane, a 155deg deep sea-glass gradient with ivory heading and the light call button.
 
 ### Navigation
 - **Header bar:** a glass bar (22px radius, min 68px tall) holding the shamrock and uppercase serif wordmark on the left (links to top) and the full phone number on the right (600, 18px, tabular). Both targets are at least 48px tall. Hover underlines the number in brass; focus shows the brass outline. No menu: the page is one scroll.
@@ -268,7 +265,7 @@ The one emblem: a single SVG silhouette filled with a radial sea-glass gradient 
 ### Do:
 - **Do** keep the ground as the single sky → mist → shore → sand → sun gradient; the scroll is the drive south.
 - **Do** keep the ground clear: no color blooms, blobs or pebbles behind the panes (Ellie cut them as less elegant).
-- **Do** tint panes in page order aqua → green → peach and end on the deep sea-glass pane.
+- **Do** tint panes in page order aqua → green → peach and end on the footer; there is no closing call band (Ellie cut it).
 - **Do** make every call button at least 80px tall (56px absolute minimum) with the full number on it.
 - **Do** keep body text at 20px and nothing below 18px.
 - **Do** measure every text color against the rendered glass at 4.5:1 or better; the brass numeral at 4.77:1 is the floor.

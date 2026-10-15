@@ -40,28 +40,10 @@
         "reason": "builder: glass pane fallback gradient end when backdrop-filter is unsupported (DESIGN.md Elevation: 86% -> 66%)"
       },
       {
-        "rule": "design-system-color",
-        "value": "rgba(24,92,70,.94)",
-        "createdAt": "2026-10-15T15:57:43.563Z",
-        "reason": "builder: deep closing pane gradient start (DESIGN.md Deep pane)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgba(11,51,40,.96)",
-        "createdAt": "2026-10-15T15:57:43.630Z",
-        "reason": "builder: deep closing pane gradient end (DESIGN.md Deep pane)"
-      },
-      {
         "rule": "design-system-font-size",
         "value": "1rem",
         "createdAt": "2026-10-15T15:57:43.697Z",
         "reason": "builder: header wordmark on phones under 640px so it never touches the number (DESIGN.md: 16px phone wordmark)"
-      },
-      {
-        "rule": "design-system-color",
-        "value": "rgba(0,0,0,.45)",
-        "createdAt": "2026-10-15T15:57:43.766Z",
-        "reason": "builder: shadow under the ivory call button on the deep green pane, where a green shadow would vanish"
       },
       {
         "rule": "design-system-color",

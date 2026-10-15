@@ -56,8 +56,6 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .glass.t-aqua{--tint:230,246,246}
 .glass.t-green{--tint:232,246,238}
 .glass.t-peach{--tint:255,243,232}
-.glass.deep{background:linear-gradient(155deg,rgba(24,92,70,.94),rgba(11,51,40,.96));color:var(--ivory);
-  box-shadow:0 30px 60px -26px rgba(11,51,40,.55),0 4px 14px -6px rgba(11,51,40,.25)}
 
 /* ---------- header ---------- */
 .top{padding-top:14px}
@@ -76,12 +74,9 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .call span{font:400 1.375rem/1.25 var(--sans);letter-spacing:.03em;font-variant-numeric:tabular-nums}
 .call:focus-visible{outline:2px solid var(--focus);outline-offset:4px}
 .call:active{box-shadow:0 8px 18px -10px rgba(11,51,40,.6)}
-.call.light{background:linear-gradient(155deg,#fbf8f1,#e9efe9);color:var(--deep);box-shadow:0 18px 36px -18px rgba(0,0,0,.45)}
-.close .call:focus-visible{outline-offset:-7px}
 @media (max-width:399px){.call b{letter-spacing:.08em}}
 @media (hover:hover){
   .call:hover{background:linear-gradient(155deg,#155741,#0a3327);outline:2px solid var(--focus);outline-offset:4px}
-  .call.light:hover{background:#fff;outline-offset:-7px}
   footer a:hover{text-decoration-color:var(--focus)}
 }
 .note{margin-top:16px;font-size:1.125rem;color:var(--ink-soft);text-wrap:balance}
@@ -112,7 +107,6 @@ h2{font:400 clamp(2rem,1.55rem + 2vw,2.875rem)/1.12 var(--serif);text-wrap:balan
 .also li::before{content:"";position:absolute;left:0;top:.62em;width:.6em;height:.6em;border-radius:40% 55% 45% 60%;background:linear-gradient(150deg,#8fc4ae,#5f9f86)}
 .aside{margin-top:30px;padding-top:26px;border-top:1px solid rgba(19,52,42,.14)}
 .aside h3{font:400 1.625rem/1.25 var(--serif);color:var(--deep);margin-bottom:10px}
-.close h2{color:var(--ivory)}
 
 /* ---------- footer ---------- */
 footer{padding:28px 0 56px;font-size:1.125rem;color:var(--ink-soft)}
@@ -153,18 +147,15 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
   #driver .pane > :not(.aside){grid-column:1}
   #driver .pane{column-gap:0}
   #driver .pane > :not(.aside){padding-right:64px}
-  .close .pane{display:grid;grid-template-columns:1fr auto;column-gap:48px;align-items:center;padding:56px 64px}
-  .close h2{margin:0}
-  .close .call{margin:0;width:24rem}
-}
+  }
 </style>
 </head>
 <body>
 <!--
 DIRECTION CONTRACT (Ellie, 2026-10-15: very elegant, high-class, glassy "liquid glass", light soft gradients; older-audience rules hold)
 THESIS: sea glass. Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky that warms from a New Jersey morning (top) to a Florida afternoon (bottom): the scroll is the drive south. Refuses the dark-hero-plus-white-bands default and every moving glass effect.
-OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons and close pane; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. A frosted sea-glass shamrock is the one emblem. No glints, no motion.
-STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → call.
+OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. A frosted sea-glass shamrock is the one emblem. No glints, no motion.
+STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → footer (no closing call band, Ellie cut it).
 FIRST VIEWPORT (phone): a slim glass header bar holding only the name in spaced capitals, centered (the number lives on the Call button, at Ellie's request); then one centered column: a small frosted shamrock crest, the deep-green "You fly. / I'll drive." as the single focal point, Ed's line, CALL ED button carrying the number, "My own cell" note. Desktop keeps the same centered column, larger.
 FORM: brief-pinned glass world; rendition = sea glass, candidate 4 of 7 (seed key 755a6284).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
@@ -234,13 +225,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </div>
   </section>
 
-  <section class="spot close" id="call">
-    
-    <div class="pane glass deep">
-      <h2>Heading south this winter?</h2>
-      <a class="call light" href="tel:+17323003835"><b>Call Ed</b><span>732-300-3835</span></a>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -293,8 +277,5 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   </defs>
 </svg>
-<script>
-(function(){var m=new Date().getMonth();if(m>=2&&m<=4){var h=document.querySelector('#call h2');if(h)h.textContent='Heading home to New Jersey?';}})();
-</script>
 </body>
 </html>

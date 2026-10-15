@@ -13,9 +13,8 @@
   - How it works (I–III)
   - The rate ($1 per mile + Call for your total)
   - One driver + When a truck is the better choice
-  - deep-green close ("Heading south this winter?"; March–May it reads "Heading home to New Jersey?")
-  - footer
-- **Desktop** puts How it works and The rate side by side. One driver splits into two columns, and the close pane puts its heading beside the button.
+  - footer (Ellie cut the deep-green "Heading south this winter? / Call Ed" close)
+- **Desktop** puts How it works and The rate side by side. One driver splits into two columns.
 - **Type:** Gilda Display (self-hosted, OFL, 13 KB) for headings and the price. The system sans at 20px for body. Button labels are letterspaced capitals.
 - **Contact:** every call link is `tel:+17323003835`. There is no text button because texting is unknown. The first screen has one contact button, Call Ed, carrying the full number.
 - **Checked:**
