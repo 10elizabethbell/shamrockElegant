@@ -174,7 +174,7 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
 DIRECTION CONTRACT (Ellie, 2026-10-15: very elegant, high-class, glassy "liquid glass", light soft gradients; older-audience rules hold)
 THESIS: sea glass. Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky that warms from a New Jersey morning (top) to a Florida afternoon (bottom): the scroll is the drive south. Refuses the dark-hero-plus-white-bands default and every moving glass effect.
 OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. An engraved deep-green line shamrock is the one emblem (Ellie picked option A of four; the options page stays live for a later swap). No glints, no motion.
-STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → footer (no closing call band, Ellie cut it). A still glass road winds down the page from New Jersey at the top to Miami at the bottom, crossing between sections under frosted city signs (Ellie, 2026-10-15); only the header and the rate stay as glass panes, the rest sits on the sky.
+STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → footer (no closing call band, Ellie cut it). A still, smooth glass road wanders down the page behind the text from New Jersey at the top to Miami at the bottom, meeting frosted city signs between sections and looping twice (Ellie, 2026-10-15); only the header and the rate stay as glass panes, the rest sits on the sky.
 FIRST VIEWPORT (phone): a slim glass header bar holding only the name in spaced capitals, centered (the number lives on the Call button, at Ellie's request); then one centered column: a small frosted shamrock crest, the deep-green "You fly. / I'll drive." as the single focal point, Ed's line, CALL ED button carrying the number, "My own cell" note. Desktop keeps the same centered column, larger.
 FORM: brief-pinned glass world; rendition = sea glass, candidate 4 of 7 (seed key 755a6284).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
@@ -276,9 +276,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </defs>
 </svg>
 <script>
-/* The road south: a still, winding road drawn behind the page. It runs down one edge beside each section,
-   crosses to the other edge in the lane between sections, and ends at the bottom in Florida.
-   Each crossing carries a glass sign with a city on the drive down the coast. Redrawn only on resize. */
+/* The road south: a still, smooth road drawn behind the page. It wanders across the full width behind the
+   text, meets a glass city sign in each lane between sections, loops twice like a highway interchange, and
+   ends at the bottom in Florida. Redrawn only on resize; nothing moves. */
 (function(){
   var page=document.querySelector('.page'), road=page&&page.querySelector('.road');
   if(!road)return;
@@ -291,43 +291,49 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var groups=[];
     els.forEach(function(el){var b=box(el,pr.top),g=groups[groups.length-1];
       if(g&&b.t<g.b){g.b=Math.max(g.b,b.b);}else groups.push(b);});
-    var main=document.querySelector('main'), ms=getComputedStyle(main);
-    var edge=main.getBoundingClientRect().left-pr.left+parseFloat(ms.paddingLeft);
-    var xL=Math.round(edge/2), xR=W-xL, side=xR;
-    var rw=W<640?10:W<1024?14:20;
-    /* the road is sampled as points: gently weaving runs down the edges (where the margin allows), S-bends across
-       the lanes, and on every other lane a full loop like a highway interchange. It is drawn in pieces so the
-       second half of each loop passes over the first. */
-    var pieces=[[]], signs=[], cur=pieces[0];
-    function put(x,y){cur.push(Math.round(x*10)/10+' '+Math.round(y*10)/10);}
-    function cut(){var last=cur[cur.length-1];cur=[last];pieces.push(cur);}
-    function sm(t){t=Math.max(0,Math.min(1,t));return t*t*(3-2*t);}
-    var amp=Math.max(0,Math.min(40,edge/2-rw/2-8)), R=W<640?26:W<1024?32:42;
-    function run(x,ya,yb,inward){var len=yb-ya,n=Math.max(1,Math.round(len/280)),steps=Math.max(2,Math.ceil(len/4));
-      for(var j=0;j<=steps;j++){var t=j/steps;put(x+inward*amp*Math.sin(Math.PI*n*t)*Math.sin(Math.PI*t),ya+len*t);}}
-    function cross(xs,xo,y1,y2,loop){var D=xo-xs,dir=D>0?1:-1,L=y2-y1,steps=Math.ceil(Math.abs(D)/2)+60,stop=.3,half=false;
-      for(var j=0;j<=steps;j++){var t=j/steps,x,y;
-        if(!loop){x=xs+D*sm(t);y=y1+L*t+L*.22*Math.sin(2*Math.PI*t);}
-        else{
-          x=t<.4?xs+D*stop*sm(t/.4):t<.6?xs+D*stop:xs+D*(stop+(1-stop)*sm((t-.6)/.4));
-          y=y1+L*(t+t*t)/2;
-          if(t>.4&&t<.6){var ph=2*Math.PI*sm((t-.4)/.2);x+=dir*R*Math.sin(ph);y+=R*(1-Math.cos(ph));
-            if(!half&&ph>Math.PI){half=true;put(x,y);cut();}}
-        }
-        put(x,y);}
-      return loop?{x:xs+D*.7,y:y1+L*.85*.5+L*.35}:{x:xs+D/2,y:y1+L/2};}
-    var side=xR;
-    put(xR,-20);
-    for(var i=0;i<groups.length-1;i++){
-      var a=groups[i].b, b=groups[i+1].t, pad=(b-a)*.12, y1=a+pad, y2=b-pad, other=side===xR?xL:xR, inward=side===xR?-1:1;
-      run(side,i?groups[i].t:0,y1,inward);
-      signs.push(cross(side,other,y1,y2,i%2===0)); side=other;
+    var rw=W<640?10:W<1024?14:20, R=W<640?28:W<1024?36:46, sw=W<640?100:120;
+    /* key points the road passes through, top to bottom: it wanders the full width behind each section,
+       meets a sign in each lane between sections, and in two lanes swings through a full interchange loop.
+       A fixed seed keeps the wander the same on every visit. */
+    var seed=7; function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646;}
+    function lerp(a,b,t){return a+(b-a)*t;}
+    var signX=[.3,.68,.36,.64,.42], keys=[{x:W*.9,y:-40}], signs=[];
+    for(var i=0;i<groups.length;i++){
+      var g=groups[i], h=g.b-g.t, n=Math.max(1,Math.round(h/(W<640?300:250)));
+      for(var k=1;k<=n;k++){var r=rnd(),fx=(k+i)%2?.55+.45*r:.45*r;
+        /* the headline and first Call button stay clear: in the hero the road keeps to the right edge */
+        if(i===0)fx=.94+.05*r;
+        keys.push({x:lerp(rw*2,W-rw*2,fx),y:g.t+h*k/(n+1)});}
+      if(i<groups.length-1){
+        var ym=(g.b+groups[i+1].t)/2, xs=Math.max(sw,Math.min(W-sw,W*signX[i%signX.length]));
+        if(i%2===0){var xl=xs<W/2?Math.min(W-R-rw*2,xs+W*.34):Math.max(R+rw*2,xs-W*.34);keys.push({x:xl,y:ym-R*.6,loop:true});}
+        keys.push({x:xs,y:ym}); signs.push({x:xs,y:ym});
+      }
     }
-    var last=groups[groups.length-1].b, yEnd=last+(H-last)*.5, y1e=last+(yEnd-last)*.2;
-    run(side,groups[groups.length-1].t,y1e,side===xR?-1:1);
-    for(var q=1;q<=60;q++){var t=q/60;put(side+(W/2-side)*sm(t),y1e+(yEnd-y1e)*Math.sin(Math.PI/2*t));}
+    var last=groups[groups.length-1].b, yEnd=last+(H-last)*.55;
+    keys.push({x:W/2,y:yEnd});
+    /* a smooth Catmull-Rom curve through the key points, sampled finely; at a loop point a full circle is spliced
+       in tangent to the road, split in two pieces so the second half passes over the first */
+    var pieces=[[]], cur=pieces[0];
+    function put(x,y){cur.push(Math.round(x*10)/10+' '+Math.round(y*10)/10);}
+    function cut(){var lastp=cur[cur.length-1];cur=[lastp];pieces.push(cur);}
+    function P(j){return keys[Math.max(0,Math.min(keys.length-1,j))];}
+    put(keys[0].x,keys[0].y);
+    for(var j=0;j<keys.length-1;j++){
+      var p0=P(j-1),p1=P(j),p2=P(j+1),p3=P(j+2), dist=Math.hypot(p2.x-p1.x,p2.y-p1.y), steps=Math.max(8,Math.ceil(dist/3));
+      if(p1.loop){
+        var tx=(p2.x-p0.x)/2, ty=(p2.y-p0.y)/2, tl=Math.hypot(tx,ty)||1; tx/=tl; ty/=tl;
+        var nx=-ty, ny=tx; if((p1.x+nx*R)>W/2===(p1.x>W/2)){nx=-nx;ny=-ny;}
+        var cs=Math.ceil(2*Math.PI*R/3), half=false;
+        for(var c=1;c<=cs;c++){var th=2*Math.PI*c/cs, cx=p1.x+nx*R*(1-Math.cos(th))+tx*R*Math.sin(th), cy=p1.y+ny*R*(1-Math.cos(th))+ty*R*Math.sin(th);
+          put(cx,cy); if(!half&&th>=Math.PI){half=true;cut();}}
+      }
+      for(var q=1;q<=steps;q++){var t=q/steps,t2=t*t,t3=t2*t;
+        put(.5*((2*p1.x)+(-p0.x+p2.x)*t+(2*p0.x-5*p1.x+4*p2.x-p3.x)*t2+(-p0.x+3*p1.x-3*p2.x+p3.x)*t3),
+            .5*((2*p1.y)+(-p0.y+p2.y)*t+(2*p0.y-5*p1.y+4*p2.y-p3.y)*t2+(-p0.y+3*p1.y-3*p2.y+p3.y)*t3));}
+    }
     var names=[], n=signs.length;
-    for(var k=0;k<n;k++)names.push(ROUTE[n>1?Math.round(k*(ROUTE.length-1)/(n-1)):0]);
+    for(var k2=0;k2<n;k2++)names.push(ROUTE[n>1?Math.round(k2*(ROUTE.length-1)/(n-1)):0]);
     signs.push({x:W/2,y:yEnd}); names.push(END);
     svg.setAttribute('width',W); svg.setAttribute('height',H); svg.setAttribute('viewBox','0 0 '+W+' '+H);
     svg.innerHTML='';
