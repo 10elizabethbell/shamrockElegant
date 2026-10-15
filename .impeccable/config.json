@@ -1,0 +1,10 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {"rule":"overused-font","value":"roboto","createdAt":"2026-10-15T14:10:00.000Z","reason":"pitch-site house style (ellie-taste.md: system font stack); Roboto is only the Android system fallback"},
+      {"rule":"cream-palette","value":"*","files":["index.html"],"createdAt":"2026-10-15T14:10:00.000Z","reason":"the sand tone is the Florida end of the still sky-to-sand scene (direction contract), not a cream page ground"}
+    ]
+  }
+}
