@@ -65,10 +65,15 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .brand{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:10px;min-height:48px;text-decoration:none;font:400 1.0625rem/1.2 var(--serif);letter-spacing:.12em;text-transform:uppercase}
 .brand svg{width:32px;height:32px;flex:none;overflow:visible}
 .top-phone{flex:none;display:inline-flex;align-items:center;min-height:48px;padding:0 4px;font:600 1.125rem var(--sans);letter-spacing:.03em;text-decoration:none;font-variant-numeric:tabular-nums}
-@media (max-width:639px){.brand{font-size:1rem;letter-spacing:.03em;gap:8px}.brand svg{width:26px;height:26px}.top-phone{font-size:1.0625rem;letter-spacing:0}.top .bar{padding:6px 12px;gap:10px}}
-@media (max-width:399px){.brand{letter-spacing:.02em;gap:6px}.brand svg{width:22px;height:22px}}
-@media (max-width:389px){.brand svg{display:none}}
-@media (max-width:339px){.brand span{display:none}.brand svg{display:block}}
+@media (max-width:639px){
+  .top .bar{flex-direction:column;justify-content:center;gap:0;padding:6px 16px;border-radius:22px}
+  .brand{flex:none;justify-content:center;min-height:44px;font-size:1rem;letter-spacing:.16em;white-space:nowrap}
+  .brand svg{display:none}
+  .top-phone{justify-content:center;min-height:48px;padding:0 12px;font-size:1.125rem;letter-spacing:.06em;position:relative}
+  .top-phone::before{content:"";position:absolute;top:0;left:50%;width:40px;margin-left:-20px;height:1px;background:rgba(19,70,54,.22)}
+}
+@media (max-width:379px){.brand{letter-spacing:.1em}}
+@media (max-width:339px){.brand{letter-spacing:.02em}.top .bar{padding:6px 8px}}
 
 /* ---------- call button: deep sea-glass green ---------- */
 .call{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;max-width:24rem;min-height:80px;padding:14px 18px;
@@ -168,7 +173,7 @@ DIRECTION CONTRACT (Ellie, 2026-10-15: very elegant, high-class, glassy "liquid 
 THESIS: sea glass. Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky that warms from a New Jersey morning (top) to a Florida afternoon (bottom): the scroll is the drive south. Refuses the dark-hero-plus-white-bands default and every moving glass effect.
 OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons and close pane; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. A frosted sea-glass shamrock is the one emblem. No glints, no motion.
 STORY: You fly. I'll drive your car. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → call.
-FIRST VIEWPORT (phone): glass header bar with shamrock (from 390px), name and full number; deep-green headline over the morning sky; Ed's line; CALL ED button carrying the number; "My own cell" note; the frosted sea-glass shamrock ends the screen. Desktop: the shamrock to the right.
+FIRST VIEWPORT (phone): glass header bar, centered on phones: name in spaced capitals, a short hairline, the full number below (small shamrock from 640px); deep-green headline over the morning sky; Ed's line; CALL ED button carrying the number; "My own cell" note; the frosted sea-glass shamrock ends the screen. Desktop: the shamrock to the right.
 FORM: brief-pinned glass world; rendition = sea glass, candidate 4 of 7 (seed key 755a6284).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 -->
