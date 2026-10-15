@@ -9,7 +9,7 @@
 - **The shamrock** is drawn as one piece of frosted sea glass: three heart leaves and a stem in a single silhouette, translucent in the middle and deeper at the edges, with faint frost grain. It appears large in the hero, small in the header from 640px wide (phones get a centered name-over-number header instead), and on the favicon, home-screen icon and share image. Redrawn after you said the first one looked like four pieces with the stem behind.
 - **Sections:**
   - glass header with the name and full number
-  - hero: "You fly. / I'll drive your car.", Ed's line, CALL ED button carrying the number, "My own cell" note, the shamrock
+  - hero, one centered column: small shamrock crest, "You fly. / I'll drive.", Ed's line, CALL ED button carrying the number, "My own cell" note
   - How it works (I–III)
   - The rate ($1 per mile + Call for your total)
   - One driver + When a truck is the better choice

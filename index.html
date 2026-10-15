@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shamrock Transportation · Ed Brannagan · New Jersey and Florida</title>
-<meta name="description" content="You fly. I'll drive your car. Ed Brannagan personally drives your car between New Jersey and Florida. $1 per mile. Call 732-300-3835.">
+<meta name="description" content="You fly. I'll drive. Ed Brannagan personally drives your car between New Jersey and Florida. $1 per mile. Call 732-300-3835.">
 <meta name="theme-color" content="#d9e6ea">
 <meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Shamrock Transportation · You fly. I'll drive your car.">
+<meta property="og:title" content="Shamrock Transportation · You fly. I'll drive.">
 <meta property="og:description" content="Ed Brannagan personally drives your car between New Jersey and Florida. Call 732-300-3835.">
 <meta property="og:url" content="https://10elizabethbell.github.io/shamrockElegant/">
 <meta property="og:image" content="https://10elizabethbell.github.io/shamrockElegant/og.png">
@@ -93,14 +93,15 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
   .call.light:hover{background:#fff;outline-offset:-7px}
   footer a:hover{text-decoration-color:var(--focus)}
 }
-.note{margin-top:16px;font-size:1.125rem;color:var(--ink-soft)}
+.note{margin-top:16px;font-size:1.125rem;color:var(--ink-soft);text-wrap:balance}
 
 /* ---------- hero ---------- */
-.hero{padding:44px 0 40px}
-.hero h1{font:400 clamp(2.875rem,1.9rem + 4.4vw,5.25rem)/1.04 var(--serif);letter-spacing:-.01em;color:var(--deep)}
-.hero h1 span{display:block;text-wrap:balance}
-.hero .lead{margin:22px 0 32px;font-size:1.3125rem;line-height:1.55;max-width:28em;text-wrap:pretty}
-.emblem{display:block;width:min(52vw,200px);height:auto;margin:28px auto 0;overflow:visible}
+.hero{padding:36px 0 48px}
+.hero-in{display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero h1{font:400 clamp(3.5rem,2.4rem + 5vw,6rem)/1.02 var(--serif);letter-spacing:-.01em;color:var(--deep)}
+.hero h1 span{display:block}
+.hero .lead{margin:22px 0 32px;font-size:1.3125rem;line-height:1.55;max-width:21em;text-wrap:pretty}
+.emblem{display:block;width:88px;height:88px;margin:0 0 20px;overflow:visible}
 
 /* ---------- panes ---------- */
 .spot:not(.hero){margin:0 0 28px}
@@ -132,6 +133,7 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
 @media (orientation:landscape) and (max-height:500px){
   .hero{padding:20px 0 32px}
   .hero h1{font-size:2.5rem}
+  .emblem{display:none}
   .hero .lead{margin:12px 0 18px;font-size:1.1875rem}
 }
 @media (min-width:640px){
@@ -142,9 +144,8 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
   :root{--gutter:48px;--radius:36px}
   .top{padding-top:22px}
   .top .bar{padding:8px 28px}
-  .hero{padding:96px 0 112px}
-  .hero > .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
-  .emblem{width:100%;max-width:360px;margin:0 auto}
+  .hero{padding:72px 0 104px}
+  .emblem{width:112px;height:112px;margin-bottom:28px}
   .spot:not(.hero){margin-bottom:40px}
   .pane{padding:60px 64px 64px}
   /* How it works and The rate share a row */
@@ -172,8 +173,8 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
 DIRECTION CONTRACT (Ellie, 2026-10-15: very elegant, high-class, glassy "liquid glass", light soft gradients; older-audience rules hold)
 THESIS: sea glass. Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky that warms from a New Jersey morning (top) to a Florida afternoon (bottom): the scroll is the drive south. Refuses the dark-hero-plus-white-bands default and every moving glass effect.
 OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons and close pane; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. A frosted sea-glass shamrock is the one emblem. No glints, no motion.
-STORY: You fly. I'll drive your car. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → call.
-FIRST VIEWPORT (phone): glass header bar, centered on phones: name in spaced capitals, a short hairline, the full number below (small shamrock from 640px); deep-green headline over the morning sky; Ed's line; CALL ED button carrying the number; "My own cell" note; the frosted sea-glass shamrock ends the screen. Desktop: the shamrock to the right.
+STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → call.
+FIRST VIEWPORT (phone): glass header bar, centered on phones: name in spaced capitals, a short hairline, the full number below (small shamrock from 640px); then one centered column: a small frosted shamrock crest, the deep-green "You fly. / I'll drive." as the single focal point, Ed's line, CALL ED button carrying the number, "My own cell" note. Desktop keeps the same centered column, larger.
 FORM: brief-pinned glass world; rendition = sea glass, candidate 4 of 7 (seed key 755a6284).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 -->
@@ -191,15 +192,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <main class="wrap">
   <section class="hero spot" id="top">
     
-    <div class="wrap" style="padding:0">
-      <div>
-        <h1><span>You fly.</span> <span>I'll drive your car.</span></h1>
-        <p class="lead">I'm Ed Brannagan, and I personally drive your car between New Jersey and Florida.</p>
-        <a class="call" href="tel:+17323003835"><b>Call Ed</b><span>732-300-3835</span></a>
-        <p class="note">My own cell. You'll speak with me directly.</p>
-      </div>
-      <!-- PHOTO: a portrait of Ed beside a car could take this place once he sends one. -->
+    <div class="hero-in">
+      <!-- PHOTO: a portrait of Ed beside a car could sit under the button once he sends one. -->
       <svg class="emblem" viewBox="0 0 100 100" role="img" aria-label="The Shamrock Transportation shamrock, in frosted sea glass"><use href="#shamrock"/></svg>
+      <h1><span>You fly.</span> <span>I'll drive.</span></h1>
+      <p class="lead">I'm Ed Brannagan, and I personally drive your car between New Jersey and Florida.</p>
+      <a class="call" href="tel:+17323003835"><b>Call Ed</b><span>732-300-3835</span></a>
+      <p class="note">My own cell. You'll speak with me directly.</p>
     </div>
   </section>
 
