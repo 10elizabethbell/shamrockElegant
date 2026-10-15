@@ -257,6 +257,9 @@ Heavy, calm and impossible to miss. The call button is the only interactive cont
 ### Steps List
 Roman numerals in brass numeral (Gilda, 28px) in a 3rem column spanning a serif title and a sans line of body copy; 26px between steps.
 
+### The Road South (signature)
+A still, winding road drawn behind the page by a small script from the real section positions (redrawn only on resize; no motion). It runs down one edge beside each section and crosses to the other edge in the lane between sections (136px lanes on phones, 168px from 1024px), then ends at the bottom center. The ribbon is three strokes on one path: a 1px deep-green hairline edge either side (`--road-edge`), a frosted pale sea-glass surface (`--road-glass`, 10/14/20px wide by breakpoint) and a fine dashed center line (`--road-line`), with a soft green drop shadow. Each crossing carries a frosted glass sign (pale sea-glass glass, deep-green Gilda capitals at 0.18em, a 1px inset hairline border like a highway sign, 10px corners) naming a city on the drive down the coast, chosen evenly from Philadelphia, Baltimore, Washington, Richmond, Savannah and Jacksonville to fit the number of crossings, always ending on Miami. Decorative and aria-hidden. Because the road is the divider, only the header and the rate pane remain glass panes; How it works and One driver sit straight on the sky.
+
 ### Engraved Shamrock (signature)
 The one emblem: the three-heart-leaf-and-stem silhouette drawn as a single fine outline (an SVG feMorphology dilate of the silhouette minus the silhouette itself) in currentColor, with one vein per leaf at 75% opacity. The stem tucks behind the leaves: inside the stem, the leaf edges are drawn across it (masked clear of the center hub), so the leaf reads as overlapping the stem. No fill, gradient, grain or shadow. Deep sea-glass green in the hero crest (88px phone, 112px desktop, centered above the headline); ivory with a heavier line on the deep-green favicon and home-screen icon. Ellie chose it as option A of four on 2026-10-15 (options page: https://claude.ai/artifact/6R56VxMiaXTtfF81aAc4o1); B solid emerald, C seal and D quiet glass remain candidates.
 
@@ -264,7 +267,7 @@ The one emblem: the three-heart-leaf-and-stem silhouette drawn as a single fine 
 
 ### Do:
 - **Do** keep the ground as the single sky → mist → shore → sand → sun gradient; the scroll is the drive south.
-- **Do** keep the ground clear: no color blooms, blobs or pebbles behind the panes (Ellie cut them as less elegant).
+- **Do** keep the ground clear apart from the road: no color blooms, blobs or pebbles (Ellie cut them as less elegant).
 - **Do** tint panes in page order aqua → green → peach and end on the footer; there is no closing call band (Ellie cut it).
 - **Do** make every call button at least 80px tall (56px absolute minimum) with the full number on it.
 - **Do** keep body text at 20px and nothing below 18px.

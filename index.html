@@ -30,7 +30,10 @@
   --focus:#9a7440;
   --serif:"Gilda Display","Didot","Bodoni 72",Georgia,serif;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --gutter:16px; --radius:28px;
+  --gutter:16px; --side:24px; --radius:28px;
+  /* the road south: a frosted ribbon with hairline edges; lanes are the gaps it crosses between sections */
+  --lane:136px; --road-edge:rgba(15,68,52,.4); --road-glass:rgba(236,247,242,.78); --road-line:rgba(15,68,52,.3);
+  --sign-glass:rgba(232,246,238,.74);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--sky)}
@@ -40,10 +43,22 @@ body{margin:0;color:var(--ink);font:400 1.25rem/1.6 var(--sans);isolation:isolat
 h1,h2,h3,p,ol,ul{margin:0}
 a{color:inherit}
 a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:6px}
-.page{overflow:hidden}
+.page{overflow:hidden;position:relative}
+main.wrap,footer .wrap{padding-left:var(--side);padding-right:var(--side)}
 .wrap{width:100%;max-width:72rem;margin:0 auto;padding:0 var(--gutter)}
 
 .spot{position:relative}
+
+/* ---------- the road south: drawn by the script from the real section positions; still, no motion ---------- */
+.road{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.road svg{position:absolute;top:0;left:0;overflow:visible;filter:drop-shadow(0 6px 8px rgba(19,70,54,.12))}
+.sign{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;padding:11px 20px 10px;border-radius:10px;
+  background:var(--sign-glass);color:var(--deep);font:400 1rem/1 var(--serif);letter-spacing:.18em;text-transform:uppercase;
+  outline:1px solid var(--road-edge);outline-offset:-5px;
+  box-shadow:inset 0 10px 18px -12px rgba(255,255,255,.9),0 14px 26px -14px rgba(19,70,54,.4)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  .sign{-webkit-backdrop-filter:blur(10px) saturate(140%);backdrop-filter:blur(10px) saturate(140%)}
+}
 
 /* ---------- glass ---------- */
 .glass{position:relative;border-radius:var(--radius);--tint:255,255,255;
@@ -82,7 +97,7 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .note{margin-top:16px;font-size:1.125rem;color:var(--ink-soft);text-wrap:balance}
 
 /* ---------- hero ---------- */
-.hero{padding:36px 0 48px}
+.hero{padding:36px 0 var(--lane)}
 .hero-in{display:flex;flex-direction:column;align-items:center;text-align:center}
 .hero h1{font:400 clamp(3.5rem,2.4rem + 5vw,6rem)/1.02 var(--serif);letter-spacing:-.01em;color:var(--deep)}
 .hero h1 span{display:block}
@@ -90,8 +105,10 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .emblem{display:block;width:88px;height:88px;margin:0 0 20px;overflow:visible;color:var(--deep)}
 
 /* ---------- panes ---------- */
-.spot:not(.hero){margin:0 0 28px}
+.spot:not(.hero){margin:0 0 var(--lane)}
 .pane{padding:36px 24px 40px}
+/* only the rate keeps a glass pane; the other sections sit straight on the sky */
+.pane.plain{padding:0}
 h2{font:400 clamp(2rem,1.55rem + 2vw,2.875rem)/1.12 var(--serif);text-wrap:balance;margin-bottom:22px;color:var(--deep)}
 .body{color:var(--ink-soft);max-width:34em;text-wrap:pretty}
 .pane .call{margin-top:32px}
@@ -109,7 +126,7 @@ h2{font:400 clamp(2rem,1.55rem + 2vw,2.875rem)/1.12 var(--serif);text-wrap:balan
 .aside h3{font:400 1.625rem/1.25 var(--serif);color:var(--deep);margin-bottom:10px}
 
 /* ---------- footer ---------- */
-footer{padding:28px 0 56px;font-size:1.125rem;color:var(--ink-soft)}
+footer{padding:0 0 calc(var(--lane) + 40px);font-size:1.125rem;color:var(--ink-soft)}
 footer .name{font:400 1.125rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--deep)}
 footer p + p{margin-top:4px}
 footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
@@ -122,19 +139,21 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
   .hero .lead{margin:12px 0 18px;font-size:1.1875rem}
 }
 @media (min-width:640px){
-  :root{--gutter:32px}
+  :root{--gutter:32px;--side:32px}
   .pane{padding:52px 48px 56px}
 }
 @media (min-width:1024px){
-  :root{--gutter:48px;--radius:36px}
+  :root{--gutter:48px;--side:48px;--radius:36px;--lane:168px}
   .top{padding-top:22px}
   .top .bar{padding:8px 28px}
-  .hero{padding:72px 0 104px}
+  .hero{padding:72px 0 var(--lane)}
   .emblem{width:112px;height:112px;margin-bottom:28px}
-  .spot:not(.hero){margin-bottom:40px}
+  .spot:not(.hero){margin-bottom:var(--lane)}
   .pane{padding:60px 64px 64px}
   /* How it works and The rate share a row */
-  .pair{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-bottom:40px}
+  .pair{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;margin-bottom:var(--lane)}
+  .pair .plain{padding-top:60px}
+  .sign{font-size:1.0625rem;padding:13px 24px 12px}
   .pair > .spot{margin:0}
   .pair .pane{height:100%}
   #rate .pane{display:flex;flex-direction:column}
@@ -155,13 +174,14 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
 DIRECTION CONTRACT (Ellie, 2026-10-15: very elegant, high-class, glassy "liquid glass", light soft gradients; older-audience rules hold)
 THESIS: sea glass. Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky that warms from a New Jersey morning (top) to a Florida afternoon (bottom): the scroll is the drive south. Refuses the dark-hero-plus-white-bands default and every moving glass effect.
 OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. An engraved deep-green line shamrock is the one emblem (Ellie picked option A of four; the options page stays live for a later swap). No glints, no motion.
-STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → footer (no closing call band, Ellie cut it).
+STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → footer (no closing call band, Ellie cut it). A still glass road winds down the page from New Jersey at the top to Miami at the bottom, crossing between sections under frosted city signs (Ellie, 2026-10-15); only the header and the rate stay as glass panes, the rest sits on the sky.
 FIRST VIEWPORT (phone): a slim glass header bar holding only the name in spaced capitals, centered (the number lives on the Call button, at Ellie's request); then one centered column: a small frosted shamrock crest, the deep-green "You fly. / I'll drive." as the single focal point, Ed's line, CALL ED button carrying the number, "My own cell" note. Desktop keeps the same centered column, larger.
 FORM: brief-pinned glass world; rendition = sea glass, candidate 4 of 7 (seed key 755a6284).
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
 -->
 
 <div class="page">
+<div class="road" aria-hidden="true"><svg></svg></div>
 <header class="top">
   <div class="wrap">
     <div class="bar glass">
@@ -186,7 +206,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="pair">
     <section class="spot" id="how">
       
-      <div class="pane glass t-aqua">
+      <div class="pane plain">
         <h2>How it works</h2>
         <ol class="steps" role="list">
           <li><span class="n" aria-hidden="true">I</span><h3>A call</h3><p>Tell me where the car is, where it's going, and when.</p></li>
@@ -210,7 +230,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   <section class="spot" id="driver">
     
-    <div class="pane glass t-peach">
+    <div class="pane plain">
       <!-- PHOTO: a portrait of Ed goes here once he sends one. -->
       <h2>One driver</h2>
       <p class="body">I drive your car myself. It never goes on a truck, so it can travel packed with your things.</p>
@@ -255,5 +275,51 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </g>
 </defs>
 </svg>
+<script>
+/* The road south: a still, winding road drawn behind the page. It runs down one edge beside each section,
+   crosses to the other edge in the lane between sections, and ends at the bottom in Florida.
+   Each crossing carries a glass sign with a city on the drive down the coast. Redrawn only on resize. */
+(function(){
+  var page=document.querySelector('.page'), road=page&&page.querySelector('.road');
+  if(!road)return;
+  var svg=road.querySelector('svg'), NS='http://www.w3.org/2000/svg';
+  var ROUTE=['Philadelphia','Baltimore','Washington','Richmond','Savannah','Jacksonville'], END='Miami';
+  function box(el,top){var r=el.getBoundingClientRect();return {t:r.top-top,b:r.bottom-top};}
+  function draw(){
+    var pr=page.getBoundingClientRect(), W=page.clientWidth, H=page.scrollHeight;
+    var els=['.hero-in','#how','#rate','#driver','footer .wrap'].map(function(q){return document.querySelector(q);}).filter(Boolean);
+    var groups=[];
+    els.forEach(function(el){var b=box(el,pr.top),g=groups[groups.length-1];
+      if(g&&b.t<g.b){g.b=Math.max(g.b,b.b);}else groups.push(b);});
+    var main=document.querySelector('main'), ms=getComputedStyle(main);
+    var edge=main.getBoundingClientRect().left-pr.left+parseFloat(ms.paddingLeft);
+    var xL=Math.round(edge/2), xR=W-xL, side=xR;
+    var rw=W<640?10:W<1024?14:20;
+    var d='M'+xR+' 0', signs=[];
+    for(var i=0;i<groups.length-1;i++){
+      var a=groups[i].b, b=groups[i+1].t, pad=(b-a)*.16, y1=a+pad, y2=b-pad, ym=(a+b)/2, other=side===xR?xL:xR;
+      d+=' L'+side+' '+y1+' C'+side+' '+ym+' '+other+' '+ym+' '+other+' '+y2;
+      signs.push({x:(side+other)/2,y:ym}); side=other;
+    }
+    var last=groups[groups.length-1].b, yEnd=last+(H-last)*.5, y1e=last+(yEnd-last)*.2;
+    d+=' L'+side+' '+y1e+' C'+side+' '+yEnd+' '+(W/2)+' '+y1e+' '+(W/2)+' '+yEnd;
+    var names=[], n=signs.length;
+    for(var k=0;k<n;k++)names.push(ROUTE[n>1?Math.round(k*(ROUTE.length-1)/(n-1)):0]);
+    signs.push({x:W/2,y:yEnd}); names.push(END);
+    svg.setAttribute('width',W); svg.setAttribute('height',H); svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.innerHTML='';
+    [['var(--road-edge)',rw+2,''],['var(--road-glass)',rw,''],['var(--road-line)',1,rw<14?'5 7':'9 11']].forEach(function(s){
+      var p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('fill','none');
+      p.setAttribute('stroke',s[0]);p.setAttribute('stroke-width',s[1]);p.setAttribute('stroke-linecap','round');p.setAttribute('stroke-linejoin','round');
+      if(s[2])p.setAttribute('stroke-dasharray',s[2]);svg.appendChild(p);});
+    Array.prototype.forEach.call(road.querySelectorAll('.sign'),function(e){e.remove();});
+    signs.forEach(function(s,j){var e=document.createElement('div');e.className='sign';e.textContent=names[j];
+      e.style.left=s.x+'px';e.style.top=s.y+'px';road.appendChild(e);});
+  }
+  var raf=0;function soon(){cancelAnimationFrame(raf);raf=requestAnimationFrame(draw);}
+  draw(); addEventListener('resize',soon); addEventListener('load',soon);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(soon);
+})();
+</script>
 </body>
 </html>
