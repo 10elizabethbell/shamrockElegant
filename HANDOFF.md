@@ -6,7 +6,7 @@
 - **The world: sea glass.** Ellie asked for "very elegant and high-class, glassy, liquid glass, light soft gradients". Impeccable's roll picked sea glass from my list of seven glass renditions: frosted, soft-edged green glass from the Jersey and Florida shores.
   - **The ground:** a still sky that warms down the page, from a cool New Jersey morning (#d9e6ea) at the top to a Florida afternoon (#f5dcc4) at the bottom, so scrolling is the drive south. Nothing moves.
 - **Glass that does something.** Frosted panes (`backdrop-filter: blur(22px) saturate(150%)`) sit straight on the graded sky with nothing else behind them (the color blooms and pebbles were cut as less elegant). The panes tint aqua, then green, then peach down the page, with soft inner shading for thickness. There are no glint or highlight lines, since you cut those before. Browsers without backdrop-filter get a more opaque pane that still reads.
-- **The shamrock** is drawn as one piece of frosted sea glass: three heart leaves and a stem in a single silhouette, translucent in the middle and deeper at the edges, with faint frost grain. It appears large in the hero, as a small crest above the headline, and on the favicon, home-screen icon and share image. Redrawn after you said the first one looked like four pieces with the stem behind.
+- **The shamrock** is an engraved line: one fine deep-green outline of three heart leaves and a stem, with a vein in each leaf. It sits as a small crest above the headline, and in ivory on the favicon, home-screen icon and share image. Ellie picked it (option A) from four drafts on 2026-10-15 and may change it; the options page stays live at https://claude.ai/artifact/6R56VxMiaXTtfF81aAc4o1 (B solid emerald, C seal, D quiet glass).
 - **Sections:**
   - slim glass header with only the name, centered (Ellie removed the header number: it already shows on the Call button)
   - hero, one centered column: small shamrock crest, "You fly. / I'll drive.", Ed's line, CALL ED button carrying the number, "My own cell" note
@@ -30,7 +30,7 @@
   - "packed with your things"
   - the truck answer is general driveaway knowledge, not Ed's words
   - the card tagline is left off
-- **The shamrock is a drawing**, not the card's emblem (the brief says ask before using a card scan). Its greens are sea-glass greens, not sampled from the card.
+- **The shamrock is a drawing**, not the card's emblem (the brief says ask before using a card scan). Its green is the site's deep green, not sampled from the card.
 - **Gilda Display** is my pick: elegant, high-contrast, and sturdy enough at heading sizes. It's one `@font-face` and `--serif` to swap.
 
 ## Placeholders and gaps

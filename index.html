@@ -87,7 +87,7 @@ a:not(.call):focus-visible{outline:2px solid var(--focus);outline-offset:4px;bor
 .hero h1{font:400 clamp(3.5rem,2.4rem + 5vw,6rem)/1.02 var(--serif);letter-spacing:-.01em;color:var(--deep)}
 .hero h1 span{display:block}
 .hero .lead{margin:22px 0 32px;font-size:1.3125rem;line-height:1.55;max-width:21em;text-wrap:pretty}
-.emblem{display:block;width:88px;height:88px;margin:0 0 20px;overflow:visible}
+.emblem{display:block;width:88px;height:88px;margin:0 0 20px;overflow:visible;color:var(--deep)}
 
 /* ---------- panes ---------- */
 .spot:not(.hero){margin:0 0 28px}
@@ -154,7 +154,7 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
 <!--
 DIRECTION CONTRACT (Ellie, 2026-10-15: very elegant, high-class, glassy "liquid glass", light soft gradients; older-audience rules hold)
 THESIS: sea glass. Frosted, soft-edged green glass from the Jersey and Florida shores, laid over a still sky that warms from a New Jersey morning (top) to a Florida afternoon (bottom): the scroll is the drive south. Refuses the dark-hero-plus-white-bands default and every moving glass effect.
-OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. A frosted sea-glass shamrock is the one emblem. No glints, no motion.
+OWN-WORLD: graded sky-to-sand ground (#d9e6ea → #f5dcc4) under clear frosted panes, no scattered color; panes tinted aqua → green → peach down the page, soft 28–36px edges, inner shading for thickness, green-tinted shadows; deep sea-glass green call buttons; Gilda Display for headings, system sans 20px body; brass only for numerals and the hover/focus outline. An engraved deep-green line shamrock is the one emblem (Ellie picked option A of four; the options page stays live for a later swap). No glints, no motion.
 STORY: You fly. I'll drive. → How it works I–III beside $1 per mile (desktop shares a row) → One driver | when a truck is better → footer (no closing call band, Ellie cut it).
 FIRST VIEWPORT (phone): a slim glass header bar holding only the name in spaced capitals, centered (the number lives on the Call button, at Ellie's request); then one centered column: a small frosted shamrock crest, the deep-green "You fly. / I'll drive." as the single focal point, Ed's line, CALL ED button carrying the number, "My own cell" note. Desktop keeps the same centered column, larger.
 FORM: brief-pinned glass world; rendition = sea glass, candidate 4 of 7 (seed key 755a6284).
@@ -175,7 +175,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     
     <div class="hero-in">
       <!-- PHOTO: a portrait of Ed beside a car could sit under the button once he sends one. -->
-      <svg class="emblem" viewBox="0 0 100 100" role="img" aria-label="The Shamrock Transportation shamrock, in frosted sea glass"><use href="#shamrock"/></svg>
+      <svg class="emblem" viewBox="0 0 100 100" role="img" aria-label="The Shamrock Transportation shamrock"><use href="#shamrock"/></svg>
       <h1><span>You fly.</span> <span>I'll drive.</span></h1>
       <p class="lead">I'm Ed Brannagan, and I personally drive your car between New Jersey and Florida.</p>
       <a class="call" href="tel:+17323003835"><b>Call Ed</b><span>732-300-3835</span></a>
@@ -239,43 +239,19 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <!-- shared drawings: the sea-glass shamrock, drawn once and reused -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <!-- the shamrock: one frosted sea-glass piece (three heart leaves and a stem in a single silhouette), deeper colour at the edges, light on each lobe -->
+      <!-- the shamrock, engraved: one fine outline of three heart leaves and a stem, with a vein in each leaf; drawn in currentColor -->
   <path id="lf" d="M50 51C45 46 32 40 30.5 28 29.5 19 35 13.5 41 13.5 45.5 13.5 49 16.5 50 21 51 16.5 54.5 13.5 59 13.5 65 13.5 70.5 19 69.5 28 68 40 55 46 50 51Z"/>
   <g id="sham-shape">
     <use href="#lf"/><use href="#lf" transform="rotate(120 50 52)"/><use href="#lf" transform="rotate(-120 50 52)"/>
     <path d="M47.6 54C48.2 67 51.6 80.5 59.6 93.4c1.2 1.9 4.2.9 3.6-1.3C59.5 79.2 55.8 66.6 53.6 53.6Z"/>
     <circle cx="50" cy="52" r="4.6"/>
   </g>
-  <mask id="sham-m" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><g fill="#fff"><use href="#sham-shape"/></g></mask>
-  <radialGradient id="sham-g" gradientUnits="userSpaceOnUse" cx="50" cy="46" r="46">
-    <stop offset="0" stop-color="#d7eee3" stop-opacity=".78"/>
-    <stop offset=".5" stop-color="#9fd0ba" stop-opacity=".86"/>
-    <stop offset="1" stop-color="#3f8a6c" stop-opacity=".97"/>
-  </radialGradient>
-  <radialGradient id="lobe-light"><stop offset="0" stop-color="#f4fbf7" stop-opacity=".7"/><stop offset="1" stop-color="#f4fbf7" stop-opacity="0"/></radialGradient>
-  <filter id="sham-glass" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="2.4" result="b"/>
-    <feComposite in="SourceAlpha" in2="b" operator="arithmetic" k2="1" k3="-1" result="rim"/>
-    <feFlood flood-color="#1f5d46" flood-opacity=".7"/>
-    <feComposite in2="rim" operator="in" result="rimc"/>
-    <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="7" result="n"/>
-    <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .22 -.03" result="speck"/>
-    <feComposite in="speck" in2="SourceAlpha" operator="in" result="grain"/>
-    <feMerge result="glass"><feMergeNode in="SourceGraphic"/><feMergeNode in="rimc"/><feMergeNode in="grain"/></feMerge>
-    <feDropShadow in="glass" dx="0" dy="3" stdDeviation="3" flood-color="#134636" flood-opacity=".25"/>
-  </filter>
-  <g id="lobe-set">
-    <ellipse cx="40" cy="24" rx="8" ry="8" fill="url(#lobe-light)"/><ellipse cx="60" cy="24" rx="8" ry="8" fill="url(#lobe-light)"/>
+  <filter id="sham-line" x="-10%" y="-10%" width="120%" height="120%"><feMorphology in="SourceGraphic" operator="dilate" radius="1.5" result="d"/><feComposite in="d" in2="SourceAlpha" operator="out"/></filter>
+  <g id="shamrock">
+    <g filter="url(#sham-line)" fill="currentColor"><use href="#sham-shape"/></g>
+    <g stroke="currentColor" stroke-width="1.1" stroke-linecap="round" fill="none" opacity=".75"><path id="vein" d="M50 47V25"/><use href="#vein" transform="rotate(120 50 52)"/><use href="#vein" transform="rotate(-120 50 52)"/></g>
   </g>
-  <g id="shamrock" filter="url(#sham-glass)">
-    <g mask="url(#sham-m)">
-      <rect width="100" height="100" fill="url(#sham-g)"/>
-      <use href="#lobe-set"/><use href="#lobe-set" transform="rotate(120 50 52)"/><use href="#lobe-set" transform="rotate(-120 50 52)"/>
-    </g>
-  </g>
-
-
-  </defs>
+</defs>
 </svg>
 </body>
 </html>

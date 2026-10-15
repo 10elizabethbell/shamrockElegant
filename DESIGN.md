@@ -147,7 +147,7 @@ Confirmed rejections: the dark-hero-plus-white-bands default, every moving glass
 - Deep sea-glass green for every call button and for the closing pane.
 - Gilda Display for headings, numerals and the wordmark; the system sans at 20px for reading.
 - Brass appears only on numerals and on hover/focus outlines.
-- One emblem: a single-piece frosted sea-glass shamrock drawn in SVG.
+- One emblem: an engraved deep-green line shamrock drawn in SVG.
 - Zero motion, zero hidden content.
 
 ## Colors
@@ -211,7 +211,7 @@ A cool-to-warm pastel scene carrying deep bottle-green ink and glass, with brass
 
 A centered column, max 72rem, with a gutter of 16px on phones, 32px from 640px and 48px from 1024px. Panes stack in one column on phones with 28px between them (40px on desktop).
 
-Breakpoints are 640px (gutter and pane padding grow) and 1024px (two-column compositions and the larger pane radius). At 1024px the hero becomes a 1.25fr / 0.75fr grid with the shamrock emblem on the right; How it works and The rate share a 1.1fr / 0.9fr row with equal-height panes and the rate's call button pinned to the pane bottom; One driver splits into two columns divided by a 1px line with 64px either side; the closing pane puts its heading and button on one row. A landscape phone (max-height 500px) shrinks the hero so the call button stays on the first screen.
+Breakpoints are 640px (gutter and pane padding grow) and 1024px (two-column compositions and the larger pane radius). At every width the hero is one centered column (shamrock crest, headline, Ed's line, call button); at 1024px How it works and The rate share a 1.1fr / 0.9fr row with equal-height panes and the rate's call button pinned to the pane bottom; One driver splits into two columns divided by a 1px line with 64px either side. A landscape phone (max-height 500px) shrinks the hero so the call button stays on the first screen.
 
 Pane padding steps 36/24/40px → 52/48/56px → 60/64/64px. A call button sits 32px below the copy it follows. Text measures cap at 28em (lead) and 34em (body).
 
@@ -252,13 +252,13 @@ Heavy, calm and impossible to miss. The call button is the only interactive cont
 - **Internal Padding:** 36/24/40px, 52/48/56px, 60/64/64px by breakpoint.
 
 ### Navigation
-- **Header bar:** a glass bar (22px radius, min 68px tall) holding the shamrock and uppercase serif wordmark on the left (links to top) and the full phone number on the right (600, 18px, tabular). Both targets are at least 48px tall. Hover underlines the number in brass; focus shows the brass outline. No menu: the page is one scroll.
+- **Header bar:** a slim glass bar (22px radius, min 60px tall) holding only the uppercase serif wordmark, centered, linking to the top (48px target). No phone number (it is on the call buttons) and no menu: the page is one scroll.
 
 ### Steps List
 Roman numerals in brass numeral (Gilda, 28px) in a 3rem column spanning a serif title and a sans line of body copy; 26px between steps.
 
-### Sea-Glass Shamrock (signature)
-The one emblem: a single SVG silhouette filled with a radial sea-glass gradient (pale center to sea-glass edge), a soft diffuse light on each leaf, a blurred inner darkening toward the edge, fine noise grain for frosting and a soft green drop shadow. Used large in the hero (up to 200px phone, 360px desktop) and small (22–32px) in the header and favicon.
+### Engraved Shamrock (signature)
+The one emblem: the three-heart-leaf-and-stem silhouette drawn as a single fine outline (an SVG feMorphology dilate of the silhouette minus the silhouette itself) in currentColor, with one vein per leaf at 75% opacity. No fill, gradient, grain or shadow. Deep sea-glass green in the hero crest (88px phone, 112px desktop, centered above the headline); ivory with a heavier line on the deep-green favicon and home-screen icon. Ellie chose it as option A of four on 2026-10-15 (options page: https://claude.ai/artifact/6R56VxMiaXTtfF81aAc4o1); B solid emerald, C seal and D quiet glass remain candidates.
 
 ## Do's and Don'ts
 
