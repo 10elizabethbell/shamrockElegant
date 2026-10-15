@@ -32,7 +32,7 @@
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --gutter:16px; --side:24px; --radius:28px;
   /* the road south: a frosted ribbon with hairline edges; lanes are the gaps it crosses between sections */
-  --lane:136px; --road-edge:rgba(15,68,52,.4); --road-glass:rgba(236,247,242,.78); --road-line:rgba(15,68,52,.3);
+  --lane:164px; --road-edge:rgba(15,68,52,.4); --road-glass:#ecf7f2;
   --sign-glass:rgba(232,246,238,.74);
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -143,7 +143,7 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
   .pane{padding:52px 48px 56px}
 }
 @media (min-width:1024px){
-  :root{--gutter:48px;--side:48px;--radius:36px;--lane:168px}
+  :root{--gutter:48px;--side:48px;--radius:36px;--lane:200px}
   .top{padding-top:22px}
   .top .bar{padding:8px 28px}
   .hero{padding:72px 0 var(--lane)}
@@ -295,23 +295,49 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var edge=main.getBoundingClientRect().left-pr.left+parseFloat(ms.paddingLeft);
     var xL=Math.round(edge/2), xR=W-xL, side=xR;
     var rw=W<640?10:W<1024?14:20;
-    var d='M'+xR+' 0', signs=[];
+    /* the road is sampled as points: gently weaving runs down the edges (where the margin allows), S-bends across
+       the lanes, and on every other lane a full loop like a highway interchange. It is drawn in pieces so the
+       second half of each loop passes over the first. */
+    var pieces=[[]], signs=[], cur=pieces[0];
+    function put(x,y){cur.push(Math.round(x*10)/10+' '+Math.round(y*10)/10);}
+    function cut(){var last=cur[cur.length-1];cur=[last];pieces.push(cur);}
+    function sm(t){t=Math.max(0,Math.min(1,t));return t*t*(3-2*t);}
+    var amp=Math.max(0,Math.min(40,edge/2-rw/2-8)), R=W<640?26:W<1024?32:42;
+    function run(x,ya,yb,inward){var len=yb-ya,n=Math.max(1,Math.round(len/280)),steps=Math.max(2,Math.ceil(len/4));
+      for(var j=0;j<=steps;j++){var t=j/steps;put(x+inward*amp*Math.sin(Math.PI*n*t)*Math.sin(Math.PI*t),ya+len*t);}}
+    function cross(xs,xo,y1,y2,loop){var D=xo-xs,dir=D>0?1:-1,L=y2-y1,steps=Math.ceil(Math.abs(D)/2)+60,stop=.3,half=false;
+      for(var j=0;j<=steps;j++){var t=j/steps,x,y;
+        if(!loop){x=xs+D*sm(t);y=y1+L*t+L*.22*Math.sin(2*Math.PI*t);}
+        else{
+          x=t<.4?xs+D*stop*sm(t/.4):t<.6?xs+D*stop:xs+D*(stop+(1-stop)*sm((t-.6)/.4));
+          y=y1+L*(t+t*t)/2;
+          if(t>.4&&t<.6){var ph=2*Math.PI*sm((t-.4)/.2);x+=dir*R*Math.sin(ph);y+=R*(1-Math.cos(ph));
+            if(!half&&ph>Math.PI){half=true;put(x,y);cut();}}
+        }
+        put(x,y);}
+      return loop?{x:xs+D*.7,y:y1+L*.85*.5+L*.35}:{x:xs+D/2,y:y1+L/2};}
+    var side=xR;
+    put(xR,-20);
     for(var i=0;i<groups.length-1;i++){
-      var a=groups[i].b, b=groups[i+1].t, pad=(b-a)*.16, y1=a+pad, y2=b-pad, ym=(a+b)/2, other=side===xR?xL:xR;
-      d+=' L'+side+' '+y1+' C'+side+' '+ym+' '+other+' '+ym+' '+other+' '+y2;
-      signs.push({x:(side+other)/2,y:ym}); side=other;
+      var a=groups[i].b, b=groups[i+1].t, pad=(b-a)*.12, y1=a+pad, y2=b-pad, other=side===xR?xL:xR, inward=side===xR?-1:1;
+      run(side,i?groups[i].t:0,y1,inward);
+      signs.push(cross(side,other,y1,y2,i%2===0)); side=other;
     }
     var last=groups[groups.length-1].b, yEnd=last+(H-last)*.5, y1e=last+(yEnd-last)*.2;
-    d+=' L'+side+' '+y1e+' C'+side+' '+yEnd+' '+(W/2)+' '+y1e+' '+(W/2)+' '+yEnd;
+    run(side,groups[groups.length-1].t,y1e,side===xR?-1:1);
+    for(var q=1;q<=60;q++){var t=q/60;put(side+(W/2-side)*sm(t),y1e+(yEnd-y1e)*Math.sin(Math.PI/2*t));}
     var names=[], n=signs.length;
     for(var k=0;k<n;k++)names.push(ROUTE[n>1?Math.round(k*(ROUTE.length-1)/(n-1)):0]);
     signs.push({x:W/2,y:yEnd}); names.push(END);
     svg.setAttribute('width',W); svg.setAttribute('height',H); svg.setAttribute('viewBox','0 0 '+W+' '+H);
     svg.innerHTML='';
-    [['var(--road-edge)',rw+2,''],['var(--road-glass)',rw,''],['var(--road-line)',1,rw<14?'5 7':'9 11']].forEach(function(s){
-      var p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('fill','none');
-      p.setAttribute('stroke',s[0]);p.setAttribute('stroke-width',s[1]);p.setAttribute('stroke-linecap','round');p.setAttribute('stroke-linejoin','round');
-      if(s[2])p.setAttribute('stroke-dasharray',s[2]);svg.appendChild(p);});
+    pieces.forEach(function(pts,pi){var d='M'+pts.join(' L');
+      /* solid colors with path opacity, so overlapping joins never double-paint into dots */
+      [['var(--deep)',rw+2,'',.4],['var(--road-glass)',rw,'',.78],['var(--deep)',1,rw<14?'5 7':'9 11',.3]].forEach(function(s){
+        var p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('fill','none');
+        p.setAttribute('stroke',s[0]);p.setAttribute('stroke-width',s[1]);p.setAttribute('stroke-linejoin','round');p.setAttribute('opacity',s[3]);
+        p.setAttribute('stroke-linecap',pi===pieces.length-1?'round':'butt');
+        if(s[2])p.setAttribute('stroke-dasharray',s[2]);svg.appendChild(p);});});
     Array.prototype.forEach.call(road.querySelectorAll('.sign'),function(e){e.remove();});
     signs.forEach(function(s,j){var e=document.createElement('div');e.className='sign';e.textContent=names[j];
       e.style.left=s.x+'px';e.style.top=s.y+'px';road.appendChild(e);});
