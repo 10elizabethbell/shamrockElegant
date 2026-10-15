@@ -25,6 +25,8 @@
 
 - **The road south** (Ellie's idea, 2026-10-15): a still glass road winds down the page, crossing between sections under frosted city signs from Philadelphia to Miami. It replaces the boxes around How it works and One driver; only the header and the rate stay glass.
 
+- **About your driver** (Ellie, 2026-10-15): Ed in his own voice, with a visible glass photo frame reading "Photo of Ed". Replace it with his photo before the site goes to him (see the PHOTO PLACEHOLDER comment).
+
 ## Assumptions I made
 - **Same copy as shamrockSimpleClear, word for word**, because you liked it. Every assumption there carries over:
   - $1 a mile is on the page (the `RATE` comment in the HTML)
