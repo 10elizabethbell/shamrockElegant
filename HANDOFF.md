@@ -23,8 +23,6 @@
   - Impeccable detector clean (three recorded exceptions in `.impeccable/config.json`, each with a reason)
   - Impeccable finish review plus every other mode except live
 
-- **The road south** (Ellie's idea, 2026-10-15): a still glass road winds down the page, crossing between sections under frosted city signs from Philadelphia to Miami. It replaces the boxes around How it works and One driver; only the header and the rate stay glass.
-
 - **About your driver** (Ellie, 2026-10-15): Ed in his own voice, with a visible glass photo frame reading "Photo of Ed". Replace it with his photo before the site goes to him (see the PHOTO PLACEHOLDER comment).
 
 ## Assumptions I made
@@ -36,8 +34,6 @@
   - the card tagline is left off
 - **The shamrock is a drawing**, not the card's emblem (the brief says ask before using a card scan). Its green is the site's deep green, not sampled from the card.
 - **Gilda Display** is my pick: elegant, high-contrast, and sturdy enough at heading sizes. It's one `@font-face` and `--serif` to swap.
-
-- **The road's cities** are the standard I-95 drive south, not Ed's stated route. If he usually takes a different road or ends somewhere other than Miami, the list is one line in the script (`ROUTE`, `END`).
 
 ## Placeholders and gaps
 - No photo of Ed (`<!-- PHOTO -->` comments mark the hero emblem spot and the One driver pane).

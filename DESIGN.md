@@ -257,9 +257,6 @@ Heavy, calm and impossible to miss. The call button is the only interactive cont
 ### Steps List
 Roman numerals in brass numeral (Gilda, 28px) in a 3rem column spanning a serif title and a sans line of body copy; 26px between steps.
 
-### The Road South (signature)
-A still, smooth road drawn behind the page by a small script from the real section positions (redrawn only on resize; no motion). It is one Catmull-Rom curve through key points: it wanders across the full width behind the text of each section (seeded, so it is the same on every visit), keeps to the right edge in the hero so the headline and first Call button stay clear, meets a frosted glass city sign in each lane between sections (164px lanes on phones, 200px from 1024px), and swings through a full interchange loop in two of those lanes, drawn in two pieces so the second half passes over the first. It ends at the bottom center under the Miami sign. Behind the rate pane it shows blurred through the glass. The ribbon is three solid strokes inside one group at 88% opacity: a 1px sage hairline edge either side (`--road-rim`), a pale sea-glass surface (`--road-glass`, 10/14/20px wide by breakpoint) and a fine dashed center line (`--road-dash`), with a soft green drop shadow. The road is one unbroken path; each overpass re-lays only its surface, its two edge hairlines and its dashes exactly over their twins, so there are no seams or dots. Signs: pale sea-glass glass, deep-green Gilda capitals at 0.18em, a 1px inset hairline border like a highway sign, 10px corners; cities chosen evenly from Philadelphia, Baltimore, Washington, Richmond, Savannah and Jacksonville to fit the number of lanes, always ending on Miami. Decorative and aria-hidden. Because the road and its signs divide the page, only the header and the rate pane remain glass panes.
-
 ### About Your Driver
 The last section before the footer, in Ed's voice from brief facts only (name, owner and only driver, the seasonal NJ to Florida drive), signed "Ed Brannagan / Owner and driver" in Gilda. A frosted glass portrait frame (4:5, max 300px, tinted green) holds the photo placeholder: the engraved shamrock at 55% and "Photo of Ed" in spaced serif capitals. Swap the figure's contents for an `<img>` (object-fit cover) when Ed sends a photo. Phones stack the frame above the text; from 1024px it sits left of the text.
 
@@ -270,7 +267,7 @@ The one emblem: the three-heart-leaf-and-stem silhouette drawn as a single fine 
 
 ### Do:
 - **Do** keep the ground as the single sky → mist → shore → sand → sun gradient; the scroll is the drive south.
-- **Do** keep the ground clear apart from the road: no color blooms, blobs or pebbles (Ellie cut them as less elegant).
+- **Do** keep the ground clear: no color blooms, blobs, pebbles or decorative roads (Ellie cut each of these).
 - **Do** tint panes in page order aqua → green → peach and end on the footer; there is no closing call band (Ellie cut it).
 - **Do** make every call button at least 80px tall (56px absolute minimum) with the full number on it.
 - **Do** keep body text at 20px and nothing below 18px.

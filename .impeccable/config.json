@@ -80,15 +80,6 @@
         "value": "1.1875rem",
         "createdAt": "2026-10-15T15:57:44.167Z",
         "reason": "builder: hero lead on phones held sideways, keeps Call on the first screen"
-      },
-      {
-        "rule": "design-system-radius",
-        "value": "10px",
-        "files": [
-          "index.html"
-        ],
-        "createdAt": "2026-10-15T23:13:26.711Z",
-        "reason": "builder: road signs on the glass road use a tighter 10px corner than panes (DESIGN.md Road South)"
       }
     ]
   }
