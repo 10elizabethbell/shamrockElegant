@@ -34,7 +34,9 @@
   /* the space between sections */
   --lane:72px;
   /* TRIAL (Ellie, 2026-10-15, may revert): a thin road traces the edge of the rate card and Ed's photo frame */
-  --road-glass:#ecf6f1; --road-rim:#8faa9f; --road-dash:#a7bfb6; --road-w:8px;
+  --lane-line:rgba(15,68,52,.55); --lane-dash:rgba(15,68,52,.4); --road-w:12px; --r-lane-in:17px; --r-lane-mid:23px;
+  /* the little car: a muted clay rose, the complement of the greens, kept soft */
+  --car:#c4877a; --car-roof:#d29d90; --car-glass:#2f4a42; --car-lamp:#fbf3df;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--sky)}
@@ -62,12 +64,17 @@ main.wrap,footer .wrap{padding-left:var(--side);padding-right:var(--side)}
 .glass.t-green{--tint:232,246,238}
 .glass.t-peach{--tint:255,243,232}
 
-/* ---------- TRIAL: road edge on the rate card and the photo frame. To revert, delete this block and the
-   "road-edge" class in the markup. Outer and inner hairline edges, a pale road surface, a dashed center line. ---------- */
-.road-edge::before,.road-edge::after{content:"";position:absolute;pointer-events:none;z-index:1}
-.road-edge::before{inset:0;border-radius:inherit;border:1px solid var(--road-rim);
-  box-shadow:inset 0 0 0 calc(var(--road-w) - 2px) var(--road-glass),inset 0 0 0 calc(var(--road-w) - 1px) var(--road-rim)}
-.road-edge::after{inset:calc(var(--road-w) / 2 - .5px);border:1px dashed var(--road-dash);border-radius:inherit}
+/* ---------- TRIAL (option D, Ellie 2026-10-15): hairline lanes around the rate card and the photo frame, drawn
+   like the engraved shamrock: two fine deep-green lane lines, a dashed center line, and one small clay-rose car.
+   To revert, delete this block and the "road-edge" class, the .lane span and the .car span in the markup. ---------- */
+.road-edge::before,.road-edge::after,.road-edge .lane{content:"";position:absolute;pointer-events:none;z-index:1}
+.road-edge::before{inset:0;border-radius:inherit;border:1px solid var(--lane-line)}
+.road-edge::after{inset:calc(var(--road-w) - 1px);border-radius:var(--r-lane-in);border:1px solid var(--lane-line)}
+.road-edge .lane{inset:5.5px;border-radius:var(--r-lane-mid);border:1px dashed var(--lane-dash)}
+.car{position:absolute;z-index:2;width:18px;height:10px;pointer-events:none;filter:drop-shadow(0 1px 1.5px rgba(19,52,42,.3))}
+.car svg{display:block;width:100%;height:100%}
+#rate .car{top:1px;left:38%}
+.portrait .car{top:58%;right:-3px;transform:rotate(90deg)}
 
 /* ---------- header ---------- */
 .top{padding-top:14px}
@@ -124,7 +131,7 @@ h2{font:400 clamp(2rem,1.55rem + 2vw,2.875rem)/1.12 var(--serif);text-wrap:balan
 /* the portrait frame: a glass placeholder until Ed's photo arrives; the image fills it at 4:5 */
 .portrait{display:grid;place-items:center;align-content:center;gap:14px;width:100%;max-width:300px;aspect-ratio:4/5;margin:0 0 32px;overflow:hidden}
 .portrait img{width:100%;height:100%;object-fit:cover}
-.portrait svg{width:96px;height:96px;color:var(--deep);opacity:.55;overflow:visible}
+.portrait > svg{width:96px;height:96px;color:var(--deep);opacity:.55;overflow:visible}
 .portrait figcaption{font:400 1.125rem/1.3 var(--serif);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
 .sig{margin-top:28px;font:400 1.75rem/1.2 var(--serif);color:var(--deep)}
 .sig span{display:block;margin-top:6px;font:400 1.125rem/1.4 var(--sans);color:var(--ink-soft)}
@@ -148,7 +155,7 @@ footer a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)
   .pane{padding:52px 48px 56px}
 }
 @media (min-width:1024px){
-  :root{--gutter:48px;--side:48px;--radius:36px;--lane:104px}
+  :root{--gutter:48px;--side:48px;--radius:36px;--r-lane-in:25px;--r-lane-mid:31px;--lane:104px}
   .top{padding-top:22px}
   .top .bar{padding:8px 28px}
   .hero{padding:72px 0 var(--lane)}
@@ -222,6 +229,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <section class="spot" id="rate">
       
       <div class="pane glass t-green road-edge">
+        <span class="lane" aria-hidden="true"></span><span class="car" aria-hidden="true"><svg viewBox="0 0 18 10"><rect x=".5" y=".5" width="17" height="9" rx="2.8" fill="var(--car)"/><rect x="10.6" y="1.5" width="2.8" height="7" rx=".9" fill="var(--car-glass)"/><rect x="2.9" y="1.8" width="2" height="6.4" rx=".7" fill="var(--car-glass)"/><rect x="5.4" y="1.7" width="4.7" height="6.6" rx="1" fill="var(--car-roof)"/><rect x="16.6" y="1.4" width=".9" height="1.6" rx=".4" fill="var(--car-lamp)"/><rect x="16.6" y="7" width=".9" height="1.6" rx=".4" fill="var(--car-lamp)"/></svg></span>
         <h2>The rate</h2>
         <!-- RATE: $1 a mile, from Ed via Ellie 2026-10-15. What it includes is not confirmed. -->
         <p class="price">$1 per mile</p>
@@ -251,6 +259,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="pane plain about">
       <!-- PHOTO PLACEHOLDER: swap this figure's contents for <img src="ed.jpg" alt="Ed Brannagan beside a client's car"> (portrait, 4:5) once Ed sends a photo. -->
       <figure class="portrait glass t-green road-edge" role="img" aria-label="Photo of Ed Brannagan, coming soon">
+        <span class="lane" aria-hidden="true"></span><span class="car" aria-hidden="true"><svg viewBox="0 0 18 10"><rect x=".5" y=".5" width="17" height="9" rx="2.8" fill="var(--car)"/><rect x="10.6" y="1.5" width="2.8" height="7" rx=".9" fill="var(--car-glass)"/><rect x="2.9" y="1.8" width="2" height="6.4" rx=".7" fill="var(--car-glass)"/><rect x="5.4" y="1.7" width="4.7" height="6.6" rx="1" fill="var(--car-roof)"/><rect x="16.6" y="1.4" width=".9" height="1.6" rx=".4" fill="var(--car-lamp)"/><rect x="16.6" y="7" width=".9" height="1.6" rx=".4" fill="var(--car-lamp)"/></svg></span>
         <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#shamrock"/></svg>
         <figcaption>Photo of Ed</figcaption>
       </figure>
