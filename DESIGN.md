@@ -211,7 +211,7 @@ A cool-to-warm pastel scene carrying deep bottle-green ink and glass, with brass
 
 A centered column, max 72rem, with a gutter of 16px on phones, 32px from 640px and 48px from 1024px. Panes stack in one column on phones with 28px between them (40px on desktop).
 
-Breakpoints are 640px (gutter and pane padding grow) and 1024px (two-column compositions and the larger pane radius). At every width the hero is one centered column (shamrock crest, headline, Ed's line, call button); at 1024px How it works and The rate share a 1.1fr / 0.9fr row with equal-height panes and the rate's call button pinned to the pane bottom; One driver splits into two columns divided by a 1px line with 64px either side. A landscape phone (max-height 500px) shrinks the hero so the call button stays on the first screen.
+Breakpoints are 640px (gutter and pane padding grow) and 1024px (two-column compositions and the larger pane radius). At every width the hero is one centered column (shamrock crest, headline, Ed's line, call button); at 1024px How it works and The rate share a 1.1fr / 0.9fr row with equal-height panes and the rate's content centered in its pane (no call button there: Ellie cut it as a duplicate of the hero's); One driver splits into two columns divided by a 1px line with 64px either side. A landscape phone (max-height 500px) shrinks the hero so the call button stays on the first screen.
 
 Pane padding steps 36/24/40px → 52/48/56px → 60/64/64px. A call button sits 32px below the copy it follows. Text measures cap at 28em (lead) and 34em (body).
 

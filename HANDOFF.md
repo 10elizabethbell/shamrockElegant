@@ -11,7 +11,7 @@
   - slim glass header with only the name, centered (Ellie removed the header number: it already shows on the Call button)
   - hero, one centered column: small shamrock crest, "You fly. / I'll drive.", Ed's line, CALL ED button carrying the number, "My own cell" note
   - How it works (I–III)
-  - The rate ($1 per mile + Call for your total)
+  - The rate ($1 per mile; no button, since the hero Call Ed is on screen with it — Ellie cut the duplicate)
   - One driver + When a truck is the better choice
   - footer (Ellie cut the deep-green "Heading south this winter? / Call Ed" close)
 - **Desktop** puts How it works and The rate side by side. One driver splits into two columns.
