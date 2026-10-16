@@ -25,8 +25,6 @@
 
 - **About your driver** (Ellie, 2026-10-15): Ed in his own voice, with a visible glass photo frame reading "Photo of Ed". Replace it with his photo before the site goes to him (see the PHOTO PLACEHOLDER comment).
 
-- **Trial: hairline-lane road edge** (Ellie, 2026-10-15, may revert): the rate card and the photo frame are traced by two fine deep-green lane lines and a dashed center, with one small clay-rose car on each (option D of five: https://claude.ai/artifact/MjZFcuLnsdiimZ84LukqU2). Revert notes are in the CSS block marked TRIAL.
-
 ## Assumptions I made
 - **Same copy as shamrockSimpleClear, word for word**, because you liked it. Every assumption there carries over:
   - $1 a mile is on the page (the `RATE` comment in the HTML)
